@@ -358,3 +358,16 @@ ul {
 }
 
 /* End main-section */
+
+
+/* Start Google Ads */
+.ads-heading {
+  color: var(--fourth-color);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ads-img {
+  width: 100%;
+}
+/* End Google Ads */
