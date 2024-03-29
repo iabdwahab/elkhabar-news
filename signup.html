@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El-Khabar News - Home</title>
+  <title>El-Khabar News - Signup</title>
   <link rel="shortcut icon" href="assets/images/logo.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +11,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
 
-  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/login-signup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <h1 style="display: none;">El-khabar news - Signup</h1>
   <header class="header">
     <div class="container">
       <ul class="social-links">
@@ -33,7 +34,6 @@
       <a href="contact.html" class="header__contact-link">Contact</a>
     </div>
   </header>
-
 
   <nav class="sub-header">
     <div class="container">
@@ -68,25 +68,54 @@
     </div>
   </nav>
 
-  <main class="news">
+  <main class="main-section">
     <div class="container">
-      <p class="news__date">July 7, 2024</p>
-      <h1 class="news__title">Reddit US IPO Filling Reveals $90.8 Million</h1>
-      
-      <div class="news__author-text">
-        <p class="news__by-word">By</p>
-        <p class="news__author">Paulette Okuneva</p>
-      </div>
+      <h2 class="main__heading">Signup To Create Your Account</h2>
 
-      <img src="assets/images/google-ads.png" alt="" class="news__image">
+      <form class="form">
 
-      <p class="news__body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, necessitatibus! Voluptatibus, est corporis porro ipsum veritatis adipisci rerum optio libero cupiditate, debitis deleniti ipsam suscipit natus quam praesentium qui quod.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis a aspernatur dolorem saepe consequuntur? Quo illo quia ad dolore laudantium quisquam dicta non reprehenderit molestias! Ratione ipsam est quis ipsa!
-        <br> <br>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, nobis excepturi? Perferendis neque doloribus perspiciatis sint nemo dolorem aspernatur, quas eligendi laborum vitae ratione culpa reprehenderit, voluptates commodi, hic saepe!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates saepe soluta reiciendis, veritatis corrupti consectetur, unde rerum error aliquid totam numquam voluptate! Voluptatibus eaque tempore, quis recusandae nulla tenetur est.
-      </p>
+        <div class="form__name">
+          <div class="form__child name__first">
+            <label for="first-name-el">First Name</label>
+            <input required type="text" id="first-name-el" class="input-field" placeholder="Enter Your First Name">
+          </div>
+
+          <div class="form__child name__last">
+            <label for="last-name-el">Last Name</label>
+            <input required type="text" id="last-name-el" class="input-field" placeholder="Enter Your Last Name">
+          </div>
+        </div> <!-- ./form__name -->
+
+        <div class="form__child form__email">
+          <label for="email-el">Email</label>
+          <input required type="email" id="email-el" class="input-field" placeholder="Enter Your Email">
+        </div>
+
+        <div class="form__child form__password">
+          <label for="password-el">Password</label>
+          <div class="form__password-container">
+            <input required type="password" id="password-el" class="input-field" placeholder="Enter Your Password">
+            <button type="button" class="hide-password-btn">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div> <!-- ./form__password-container -->
+        </div>
+
+        <div class="form__child form__password">
+          <label for="password-el">Confirm Password</label>
+          <div class="form__password-container">
+            <input required type="password" id="re-password-el" class="input-field" placeholder="Re-enter Your Password">
+            <button type="button" class="hide-password-btn">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div> <!-- ./form__password-container -->
+        </div>
+        <p class="error-msg">Must be same password</p>
+  
+        <input type="submit" value="Signup" id="submit-btn" class="log-btn">
+        <p class="form__new-user">Already A Member? <a href="login.html" class="another-log-link">Login</a></p>
+  
+      </form>
     </div>
   </main>
 
@@ -148,5 +177,7 @@
   </footer>
 
   <script src="js/global.js"></script>
+  <script src="js/form-validation.js"></script>
+  <script src="js/signup.js"></script>
 </body>
 </html>
