@@ -1,0 +1,31 @@
+@import url('global.css');
+
+.news {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.news .container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.news__date {
+  color: var(--fourth-color);
+}
+
+.news__author-text {
+  display: flex;
+  gap: 10px;
+  color: var(--fourth-color);
+}
+.news__by-word {
+  color: var(--third-color);
+}
+
+.news__image {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
