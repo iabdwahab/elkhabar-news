@@ -17,20 +17,20 @@ sliderBtns.forEach((btn, index) => {
 let sliderNumber = 0;
 
 setInterval(() => {
-  removeClassName(slideshowElements, 'slideshow__news--displayed')
-  document.querySelector(`.slideshow__news-${sliderNumber}`).classList.add('slideshow__news--displayed');
-
-  removeClassName(sliderBtns, 'slider__btn--active');
-  sliderBtns[sliderNumber].classList.add('slider__btn--active');
-
   if (sliderNumber >= 2) {
     sliderNumber = 0;
   } else {
     sliderNumber++;
   }
+  
+  removeClassName(slideshowElements, 'slideshow__news--displayed')
+  document.querySelector(`.slideshow__news-${sliderNumber}`).classList.add('slideshow__news--displayed');
 
-  console.log(sliderNumber)
-}, 2000)
+  removeClassName(sliderBtns, 'slider__btn--active');
+
+  sliderBtns[sliderNumber].classList.add('slider__btn--active');
+
+}, 2000);
 
 function removeClassName(elements, className) {
   elements.forEach(el => {
