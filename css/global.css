@@ -5,7 +5,57 @@
   --gray-bg-color: #0000004A;
   --fourth-color: #c7c7c7;
   --news-description-fs: 13px;
+
+  --card-title-font-size: 18px;
+  --card-info-font-size: 13px;
+  --card-description-font-size: 13px;
+  
+  --sidebar-title-font-size: 18px;
+  --sidebar-info-font-size: 13px;
 }
+
+/* ==================== */
+
+.card__image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 10px;
+}
+.card__heading {
+  font-size: var(--card-title-font-size);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card__heading:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.card__info {
+  display: flex;
+  font-size: var(--card-info-font-size);
+  justify-content: space-between;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: var(--fourth-color);
+}
+.card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--third-color);
+  font-size: var(--card-description-font-size);
+}
+
+
+/* ==================== */
+
+
+
 
 * {
   font-family: Inter, san-serif;
@@ -16,7 +66,6 @@
   box-sizing: border-box;
 }
 
-/* Global Rules */
 
 body {
   position: relative;
@@ -29,11 +78,13 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 a {
   text-decoration: none;
   color: var(--third-color);
   font-weight: 600;
 }
+
 ul {
   list-style: none;
 }
@@ -72,6 +123,7 @@ ul {
   width: 60px;
   margin-top: 6px;
 }
+
 .header__logo-text {
   width: 120px;
   margin-top: 4px;
@@ -92,10 +144,7 @@ ul {
     font-size: 14px;
   }
 }
-
-
 /* End Header */
-
 
 /* Start Sub-Header */
 .sub-header {
@@ -277,8 +326,9 @@ ul {
   grid-template-columns: 150px 1fr;
   gap: 10px;
 }
-.sidebar-card__heading {
-  font-size: 18px;
+.sidebar-card__title {
+  font-size: var(--sidebar-title-font-size);
+  -webkit-line-clamp: 3;
 }
 .video-thumbnail {
   position: relative;
@@ -304,7 +354,7 @@ ul {
 .sidebar-card__date {
   color: var(--fourth-color);
   margin-top: 4px;
-  font-size: 14px;
+  font-size: var(--sidebar-info-font-size);
 }
 
 .sidebar-ads__heading {
@@ -314,9 +364,6 @@ ul {
   width: 100%;
 }
 /* End Sidebar */
-
-
-
 
 /* Start Footer */
 .footer {
