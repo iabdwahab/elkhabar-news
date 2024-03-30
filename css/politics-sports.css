@@ -212,6 +212,7 @@
   .latest__card {
     flex-direction: column;
   }
+  .latest__image-link,
   .latest__image,
   .latest-card__text {
     width: 100%;
