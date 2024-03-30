@@ -167,7 +167,7 @@
   align-items: flex-start;
 }
 .latest__image {
-  width: 40%;
+  width: 100%;
 }
 .latest-card__text {
   width: 60%;
