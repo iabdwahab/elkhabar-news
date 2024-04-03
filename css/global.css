@@ -315,9 +315,9 @@ ul {
 /* Start Google Ads */
 .ads-section .container,
 .sidebar-ads-section {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 .sidebar-ads-section {
   margin-top: 20px;
