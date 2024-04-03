@@ -18,55 +18,55 @@
 <body>
   <h1 style="display: none;">El-khabar news</h1>
   <header class="header">
-    <div class="container">
-      <ul class="social-links">
-        <li><a aria-label="label" href="#"><i class="fa-brands fa-facebook-f social-links__icon"></i></a></li>
-        <li><a aria-label="label" href="#"><i class="fa-brands fa-twitter social-links__icon"></i></a></li>
-        <li><a aria-label="label" href="#"><i class="fa-brands fa-square-instagram social-links__icon"></i></a></li>
-      </ul>
+    <ul class="social-links">
+      <li><a aria-label="label" href="#"><i class="fa-brands fa-facebook-f social-links__icon"></i></a></li>
+      <li><a aria-label="label" href="#"><i class="fa-brands fa-twitter social-links__icon"></i></a></li>
+      <li><a aria-label="label" href="#"><i class="fa-brands fa-square-instagram social-links__icon"></i></a></li>
+    </ul>
 
-      <div class="logo">
-        <a aria-label="label" href="index.html" class="logo-link">
-          <img src="assets/images/logo.svg" alt="Elkhabar news logo" class="header__logo">
-          <img src="assets/images/logo-text.svg" alt="Elkhabar news logo text" class="header__logo-text">
-        </a>
-      </div>
-
-      <a aria-label="label" href="contact.html" class="header__contact-link">Contact</a>
+    <div class="logo">
+      <a aria-label="label" href="index.html" class="logo-link">
+        <img src="assets/images/logo.svg" alt="Elkhabar news logo" class="header__logo">
+        <img src="assets/images/logo-text.svg" alt="Elkhabar news logo text" class="header__logo-text">
+      </a>
     </div>
+
+    <a aria-label="label" href="contact.html" class="header__contact-link">Contact</a>
   </header>
 
   <nav class="sub-header">
-    <div class="container">
-      <button class="sub-header__menu-bar">
-        <i class="fa-solid fa-bars header-menu"></i>
+    <button class="sub-header__menu-bar">
+      <i class="fa-solid fa-bars header-menu"></i>
+    </button>
+
+    <div class="language-switcher">
+      <i class="fa-solid fa-language language-switcher-icon"></i>
+      <select id="language-selector">
+        <option value="english">English</option>
+        <option value="arabic">العربية</option>
+      </select>
+    </div>
+
+    <div class="sub-header__menu">
+      <button class="sub-header-menu__close">
+        <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="language-switcher">
-        <i class="fa-solid fa-language language-switcher-icon"></i>
-        <select id="language-selector">
-          <option value="english">English</option>
-          <option value="arabic">العربية</option>
-        </select>
-      </div>
 
-      <div class="sub-header__menu">
-        <button class="sub-header-menu__close">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+      <ul class="sub-header__navigation">
+        <li><a aria-label="label" href="index.html" class="sub-header__link">Home</a></li>
+        <li><a aria-label="label" href="politics.html" class="sub-header__link">Politics</a></li>
+        <li><a aria-label="label" href="sports.html" class="sub-header__link">Sports</a></li>
+        <li><a aria-label="label" href="economy.html" class="sub-header__link  sub-header__link--active">Economy</a></li>
+        <li><a aria-label="label" href="technology.html" class="sub-header__link">Technology</a></li>
+      </ul>
 
-        <ul class="sub-header__navigation">
-          <li><a aria-label="label" href="index.html" class="sub-header__link">Home</a></li>
-          <li><a aria-label="label" href="politics.html" class="sub-header__link">Politics</a></li>
-          <li><a aria-label="label" href="sports.html" class="sub-header__link">Sports</a></li>
-          <li><a aria-label="label" href="#" class="sub-header__link sub-header__link--active">Economy</a></li>
-          <li><a aria-label="label" href="technology.html" class="sub-header__link">Technology</a></li>
-        </ul>
-  
-        <a aria-label="label" href="login.html" class="login-btn">Login</a>
-      </div>
+      <a aria-label="label" href="login.html" class="login-btn">Login</a>
     </div>
   </nav>
+
+  
+
 
 
   <footer class="footer">
