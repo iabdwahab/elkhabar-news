@@ -16,7 +16,7 @@
   --featured-title-font-size: 24px;
   --featured-description-font-size: 14px;
 
-  --header-padding-left-right: 25px;
+  --header-padding-left-right: 20px;
 }
 
 /* ==================== */
@@ -181,8 +181,8 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: var(--header-padding-left-right);
-  padding-right: var(--header-padding-left-right);
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .sub-header__menu {
