@@ -1,0 +1,72 @@
+@import url('global.css');
+
+/* Start hero-section */
+.hero-section {
+  /* background-image: url('../assets/images/economy/landing.jpg'); */
+  height: calc(100vh - (120px));
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../assets/images/economy/landing.jpg');
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  padding-top: 100px;
+}
+.hero-section__bg-img {
+  /* width: 1524px;
+  height: 889px; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  object-fit: cover;
+}
+.hero-section::after {
+  content: '';
+  background-color: #d9d9d94c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-section__title {
+  color: #444343;
+  font-weight: 700;
+  font-size: 80px;
+}
+.hero-section__description {
+  font-size: 20px;
+  width: 40%;
+}
+/* End hero-section */
+
+/* Start features-section */
+.features-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.features-section .container {
+  display: flex;
+  justify-content: space-between;
+}
+.features__feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feature__title {
+  font-size: 30px;
+}
+.feature__description {
+  font-size: 18px;
+}
+.feature__img {
+  width: 60px;
+}
+/* End features-section */
