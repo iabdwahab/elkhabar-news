@@ -313,12 +313,12 @@ ul {
 
 
 /* Start Google Ads */
-.ads-section .container,
-.sidebar-ads-section {
+/* .ads-section .container,
+.sidebar-ads-section { */
   /* display: flex;
   flex-direction: column;
   align-items: center; */
-}
+/* }
 .sidebar-ads-section {
   margin-top: 20px;
 }
@@ -328,7 +328,7 @@ ul {
 }
 .ads-section__img {
   width: 100%;
-}
+} */
 /* End Google Ads */
 
 
