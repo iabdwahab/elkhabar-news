@@ -19,6 +19,10 @@
   --header-padding-left-right: 20px;
 }
 
+aside img {
+  max-width: 100%;
+}
+
 /* ==================== */
 
 .card__image {
