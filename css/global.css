@@ -342,6 +342,8 @@ img {
 .sidebar__cards {
   display: grid;
   gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .sidebar__card {
   display: grid;
