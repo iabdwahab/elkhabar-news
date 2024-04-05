@@ -85,11 +85,10 @@
   text-align: start;
   color: var(--main-color);
   font-size: 14px;
-  margin-top: -8px;
-  visibility: hidden;
+  display: none;
 }
 .error-msg--visible {
-  visibility: visible;
+  display: block;
 }
 
 .log-btn {

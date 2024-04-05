@@ -72,17 +72,19 @@
       <form class="form">
         <div class="form__child form__email">
           <label for="email-el">Email</label>
-          <input required type="email" id="email-el" class="input-field" placeholder="Enter Your Email">
+          <input required value="" type="email" name="email" id="email-el" class="input-field" placeholder="Enter Your Email">
+          <p class="error-msg email-error-msg">The email field must be a valid email address.</p>
         </div>
   
         <div class="form__child form__password">
           <label for="password-el">Password</label>
           <div class="form__password-container">
-            <input required type="password" id="password-el" class="input-field" placeholder="Enter Your Password">
+            <input required value="password" type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password">
             <button type="button" class="hide-password-btn">
               <i class="fa-regular fa-eye"></i>
             </button>
           </div> <!-- ./form__password-container -->
+          <p class="error-msg password-error-msg">The password field must be at least 6 characters.</p>
           <a aria-label="label" href="#" class="form__link form__forgot-link">Forgot Password?</a>
         </div>
   
@@ -152,7 +154,6 @@
   </footer>
 
   <script src="js/global.js"></script>
-  <script src="js/form-validation.js"></script>
   <script src="js/login.js"></script>
 </body>
 </html>

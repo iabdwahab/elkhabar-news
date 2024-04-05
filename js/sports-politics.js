@@ -5,11 +5,11 @@ sliderBtns.forEach((btn, index) => {
   btn.addEventListener('click', () => {
 
     // Change active slider btn
-    removeClassName(sliderBtns, 'slider__btn--active');
+    removeClassName(sliderBtns, 'slider__btn--active'); // Was decalred on [global.js] file => line 42.
     btn.classList.add('slider__btn--active');
 
     // Change active slider news
-    removeClassName(slideshowElements, 'slideshow__news--displayed')
+    removeClassName(slideshowElements, 'slideshow__news--displayed'); // Was decalred on [global.js] file => line 42.
     document.querySelector(`.slideshow__news-${index}`).classList.add('slideshow__news--displayed');
   });
 });

@@ -68,45 +68,49 @@
     <div class="container">
       <h2 class="main__heading">Signup To Create Your Account</h2>
 
-      <form class="form">
-
+      <form method="post" class="form" autocomplete="on">
         <div class="form__name">
           <div class="form__child name__first">
             <label for="first-name-el">First Name</label>
-            <input required type="text" id="first-name-el" class="input-field" placeholder="Enter Your First Name">
+            <input required type="text" name="first_name" id="first-name-el" class="input-field" placeholder="Enter Your First Name">
+            <p class="error-msg first_name-error-msg">The first name field must be at least 3 characters.</p>
           </div>
 
           <div class="form__child name__last">
             <label for="last-name-el">Last Name</label>
-            <input required type="text" id="last-name-el" class="input-field" placeholder="Enter Your Last Name">
+            <input required type="text" name="last_name" id="last-name-el" class="input-field" placeholder="Enter Your Last Name">
+            <p class="error-msg last_name-error-msg">The last name field must be at least 3 characters.</p>
           </div>
+
         </div> <!-- ./form__name -->
 
         <div class="form__child form__email">
           <label for="email-el">Email</label>
-          <input required type="email" id="email-el" class="input-field" placeholder="Enter Your Email">
+          <input required type="email" name="email" id="email-el" class="input-field" placeholder="Enter Your Email">
+          <p class="error-msg email-error-msg">The email field must be a valid email address.</p>
         </div>
 
         <div class="form__child form__password">
           <label for="password-el">Password</label>
           <div class="form__password-container">
-            <input required type="password" id="password-el" class="input-field" placeholder="Enter Your Password">
+            <input required type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password">
             <button type="button" class="hide-password-btn">
               <i class="fa-regular fa-eye"></i>
             </button>
           </div> <!-- ./form__password-container -->
+          <p class="error-msg password-error-msg">The password field must be at least 6 characters.</p>
         </div>
 
         <div class="form__child form__password">
           <label for="password-el">Confirm Password</label>
           <div class="form__password-container">
-            <input required type="password" id="re-password-el" class="input-field" placeholder="Re-enter Your Password">
+            <input required type="password" name="confirm_password" id="confirm-password-el" class="input-field" placeholder="Re-enter Your Password">
             <button type="button" class="hide-password-btn">
               <i class="fa-regular fa-eye"></i>
             </button>
           </div> <!-- ./form__password-container -->
+          <p class="error-msg confirm_password-error-msg">Passwords must be the same.</p>
         </div>
-        <p class="error-msg">Must be same password</p>
   
         <input type="submit" value="Signup" id="submit-btn" class="log-btn">
         <p class="form__new-user">Already A Member? <a aria-label="label" href="login.html" class="another-log-link">Login</a></p>
@@ -173,7 +177,6 @@
   </footer>
 
   <script src="js/global.js"></script>
-  <script src="js/form-validation.js"></script>
   <script src="js/signup.js"></script>
 </body>
 </html>
