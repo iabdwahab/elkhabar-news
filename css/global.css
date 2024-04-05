@@ -321,20 +321,12 @@ img {
 
 
 /* Start Google Ads */
-.ads-section .container,
-.sidebar-ads-section { 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.sidebar-ads-section {
-  margin-top: 20px;
-}
-.ads-section__heading {
-  color: #B7B2B2;
+.ads__title {
+  color: var(--fourth-color);
+  text-align: center;
   margin-bottom: 10px;
 }
-.ads-section__img {
+.ads__image {
   width: 100%;
 }
 /* End Google Ads */
