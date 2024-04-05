@@ -85,7 +85,7 @@
   text-align: start;
   color: var(--main-color);
   font-size: 14px;
-  display: none;
+  display: none; 
 }
 .error-msg--visible {
   display: block;
