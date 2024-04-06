@@ -17,7 +17,10 @@ const translations = {
     categories: "الأقسام",
     find_us_in_social_media: "تابعنا على صفحات التواصل الاجتماعي",
     community: "المجتمع",
-    ad: "إعلان"
+    ad: "إعلان",
+    featured_news: "خبر مميز",
+    latest_news: "آخر الأخبار",
+    load_more: "تحميل المزيد"
   },
   en: {
     contact: "Contact",
@@ -37,7 +40,10 @@ const translations = {
     categories: "Categories",
     find_us_in_social_media: "Find Us In Social Media",
     community: "Community",
-    ad: "ad"
+    ad: "ad",
+    featured_news: "Featured News",
+    latest_news: "Latest News",
+    load_more: "Load More"
   }
 }
 
