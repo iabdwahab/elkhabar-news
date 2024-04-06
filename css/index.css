@@ -151,6 +151,11 @@
   gap: 10px;
 }
 
+/* Rotate arrow when paage is rtl */
+html[dir="rtl"] .content-heading__link i {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 970px) {
   .content .container {
     grid-template-columns: 1fr;

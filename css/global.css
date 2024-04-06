@@ -1,3 +1,6 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
 :root {
   --main-color: #EC1616;
   --second-color: #fff;
@@ -67,7 +70,6 @@ aside img {
 
 
 * {
-  font-family: Inter, san-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -77,6 +79,8 @@ aside img {
 
 
 body {
+  font-family: Inter, san-serif;
+  /* font-family: "Noto Kufi Arabic", sans-serif; */
   position: relative;
 }
 
