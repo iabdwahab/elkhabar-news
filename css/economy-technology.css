@@ -77,6 +77,10 @@ img {
 .features__feature:not(:last-child) {
   border-right: 2px solid #D9D9D9;
 }
+html[dir="rtl"] .features__feature:not(:last-child) {
+  border-right: unset;
+  border-left: 2px solid #D9D9D9;
+}
 .feature__title {
   font-size: 20px;
 }
