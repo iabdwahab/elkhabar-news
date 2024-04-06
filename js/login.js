@@ -1,5 +1,5 @@
 if (localStorage.getItem('userInfo')) {
-  window.location.href = 'elkhabar-news/index.html';
+  window.location.href = './index.html';
 }
 
 
@@ -87,7 +87,7 @@ loginBtn.addEventListener('click', (e) => {
           document.querySelector('.sub-header__user-elements').classList.add('logged-in');
 
           // When signin success; browser will be in index.html
-          window.location.href = ('elkhabar-news/index.html');
+          window.location.href = ('./index.html');
         }
         
       })
