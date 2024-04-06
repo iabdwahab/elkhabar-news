@@ -26,8 +26,8 @@ const signupBtn = document.querySelector('.log-btn');
 inputFields.forEach(inputField => {
 
     inputField.addEventListener('input', () => {
-      // document.querySelector(`.${inputField.name}-error-msg`).innerHTML = 'Must be at least 3 characters.';
-      document.querySelector(`.${inputField.name}-error-msg`).classList.remove('error-msg--visible')
+      document.querySelector(`.${inputField.name}-error-msg`).classList.remove('error-msg--visible');
+      inputField.classList.remove('input-field--error');
     })
 
 });
@@ -94,16 +94,17 @@ signupBtn.addEventListener('click', (e) => {
       .then(response => response.json())
       .then(result => {
   
-        console.log(result);
-  
         // If signup faild
         if (!result.success) {
-  
+          console.log(result)
           Object.keys(result.errors).forEach(error => {
             const errorText = result.errors[error][0]
-  
+            const erorredEl = document.querySelector(`.${error}-error-msg`);
+
             document.getElementsByName(error)[0].classList.add('input-field--error');
-            document.querySelector(`.${error}-error-msg`).innerHTML = errorText;
+
+            erorredEl.innerHTML = errorText;
+            erorredEl.classList.add('error-msg--visible');
           })
   
         }
