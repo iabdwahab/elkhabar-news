@@ -102,8 +102,7 @@
 
 @media (max-width: 970px) {
   .slideshow__news {
-    height: unset;
-    min-height: 400px;
+    height: 350px;
   }
   .slideshow__text {
     max-width: 100%;
