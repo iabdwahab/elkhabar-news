@@ -61,7 +61,11 @@
         <li><a aria-label="label" href="technology.html" class="sub-header__link">Technology</a></li>
       </ul>
 
-      <a aria-label="label" href="login.html" class="login-btn">Login</a>
+      <div class="sub-header__user-elements">
+        <p class="sub-header__username">Ibrahim AbdElwahab</p>
+        <a aria-label="label" href="login.html" class="sub-header__login-btn">Login</a>
+        <button aria-label="label" href="login.html" class="sub-header__logout-btn">Logout</button>
+      </div>
     </div>
   </nav>
 
@@ -79,7 +83,7 @@
         <div class="form__child form__password">
           <label for="password-el">Password</label>
           <div class="form__password-container">
-            <input required value="password" type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password">
+            <input required type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password">
             <button type="button" class="hide-password-btn">
               <i class="fa-regular fa-eye"></i>
             </button>

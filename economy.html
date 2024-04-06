@@ -61,7 +61,11 @@
         <li><a aria-label="label" href="technology.html" class="sub-header__link">Technology</a></li>
       </ul>
 
-      <a aria-label="label" href="login.html" class="login-btn">Login</a>
+      <div class="sub-header__user-elements">
+        <p class="sub-header__username">Ibrahim AbdElwahab</p>
+        <a aria-label="label" href="login.html" class="sub-header__login-btn">Login</a>
+        <button aria-label="label" href="login.html" class="sub-header__logout-btn">Logout</button>
+      </div>
     </div>
   </nav>
 
@@ -102,16 +106,12 @@
     </div> <!-- ./container -->
   </section>
 
-  <section class="ads-section">
+  <div class="ads-container">
     <div class="container">
-      <h4 class="ads-heading">Google Ads</h4>
-      <div class="ads-img-container">
-        <a aria-label="label" href="#">
-          <img src="assets/images/google-ads.png" alt="image" class="ads-img">
-        </a>
-      </div>
+      <h4 class="ads__title">Google Ads</h4>
+      <img src="assets/images/google-ads.png" alt="img" class="ads__image">
     </div>
-  </section>
+  </div>
 
   <div class="content">
     <div class="container">
@@ -269,7 +269,10 @@
           </div> <!-- ./sidebar__cards -->
         </div>
 
-
+        <div class="ads-container sidebar-ads">
+          <h4 class="ads__title">Google Ads</h4>
+          <img src="assets/images/google-ads.png" alt="img" class="ads__image">
+        </div>
       </aside>
     </div>
   </div>
@@ -331,5 +334,7 @@
     </div>
   </footer>
 
+
+  <script src="js/global.js"></script>
 </body>
 </html>

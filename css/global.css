@@ -231,19 +231,55 @@ img {
   top: calc(100% + 2px);
 }
 
-
-.login-btn {
+.sub-header__user-elements {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.sub-header__username {
+  max-width: 80px;
+  /* Add [...] at the end of text if it long */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: none;
+}
+.sub-header__login-btn,
+.sub-header__logout-btn {
   background-color: var(--main-color);
   padding: 6px 40px;
   border-radius: 100px;
   color: var(--second-color);
 }
-.login-btn:hover {
+.sub-header__login-btn:hover,
+.sub-header__logout-btn:hover {
   background-color: rgba(246, 23, 23, 0.83);
 }
-.login-btn:active {
+.sub-header__login-btn:active,
+.sub-header__logout-btn:active {
   background-color: rgba(246, 23, 23, 0.759);
 }
+.sub-header__logout-btn {
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  cursor: pointer;
+  display: none;
+}
+
+.logged-in .sub-header__username {
+  display: -webkit-box;
+}
+.logged-in .sub-header__login-btn {
+  display: none;
+}
+.logged-in .sub-header__logout-btn {
+  display: block;
+}
+
 .sub-header__menu-bar {
   display: none;
   padding: 4px;
@@ -253,8 +289,15 @@ img {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .sub-header .container {
+@media (max-width: 800px) {
+  .container {
+    max-width: 100%;
+  }
+  .sub-header {
+    padding-left: var(--header-padding-left-right);
+    padding-right: var(--header-padding-left-right);
+  }
+  .sub-header {
     flex-direction: row-reverse;
   }
   .sub-header__menu {
@@ -308,8 +351,24 @@ img {
     top: 100%;
     width: 100%;
   }
-  .login-btn {
+
+  .sub-header__user-elements {
+    flex-direction: column;
     margin-top: 20px;
+    gap: 20px;
+  }
+  .sub-header__username {
+    /* Return to deafault */
+    max-width: unset;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: unset;
+    overflow: unset;
+    /* display: none; */
+  }
+
+  .sub-header__login-btn,
+  .sub-header__logout-btn {
+    width: 100%;
     text-align: center;
     padding: 15px;
   }
@@ -321,14 +380,14 @@ img {
 
 
 /* Start Google Ads */
-/* .ads__title {
+.ads__title {
   color: var(--fourth-color);
   text-align: center;
   margin-bottom: 10px;
 }
 .ads__image {
   width: 100%;
-} */
+}
 /* End Google Ads */
 
 /* Start Sidebar */

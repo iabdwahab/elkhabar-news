@@ -1,3 +1,8 @@
+if (localStorage.getItem('userInfo')) {
+  window.location.href = '../index.html';
+}
+
+
 changePasswordVisibility();
 
 function changePasswordVisibility() {
@@ -69,8 +74,24 @@ loginBtn.addEventListener('click', (e) => {
     
     fetch("https://blog.ammarelgendy.online/api/login", requestOptions)
       .then(response => response.json())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
-  }
+      .then(result => {
 
-});
+        if (result.success) {
+          localStorage.setItem('userInfo', JSON.stringify(result.data));
+
+          const userFirstName = result.data.first_name;
+          const userLastName = result.data.last_name;
+
+          document.querySelector('.sub-header__username').innerHTML = `${userFirstName} ${userLastName}`;
+
+          document.querySelector('.sub-header__user-elements').classList.add('logged-in');
+
+          // When signin success; browser will be in index.html
+          window.location.href = ('../index.html');
+        }
+        
+      })
+      .catch(error => console.log('error', error));
+    }
+    
+  });
