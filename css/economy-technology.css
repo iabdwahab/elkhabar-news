@@ -218,3 +218,68 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   }
 }
 /* End .content */
+
+
+/* Start Featured */
+.featured-section {
+  margin-bottom: 20px;
+}
+.featured-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.featured__card {
+  border: 5px solid black;
+  position: relative;
+  display: flex;
+  align-items: end;
+  color: white;
+  height: 300px;
+  padding: 20px;
+}
+.featured-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.featured-card__date {
+  color: var(--main-color);
+  font-weight: 600;
+}
+.featured-card__author {
+  color: var(--fourth-color);
+  font-weight: 600;
+}
+.featured-card__author {
+  color: var(--fourth-color);
+  font-weight: 600;
+}
+
+.featured-card-1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.featured-card-1 .featured-card__text {
+  width: 80%;
+}
+.featured-card-2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.featured-card-3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+@media (max-width: 768px) {
+  .featured-section .container {
+    grid-template-columns: 1fr;
+  }
+  .featured__card {
+    grid-area: unset;
+  }
+}
+/* End Featured */
