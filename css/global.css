@@ -244,14 +244,8 @@ html[dir="rtl"] .logo-link {
   top: calc(100% + 2px);
 }
 html[dir="rtl"] .sub-header__link--active::after {
-  content: '';
-  width: 60%;
-  height: 2px;
-  background-color: #EC1616;
-  position: absolute;
   left: unset;
   right: 0;
-  top: calc(100% + 2px);
 }
 
 .sub-header__user-elements {
