@@ -50,7 +50,9 @@ const translations = {
     home_title: "الخبر نيوز - الصفحة الرئيسية",
     login_title: "الخبر نيوز - تسجيل الدخول",
     news_title: "الخبر نيوز - الخبر",
+    signup_title: "الخبر نيوز - إنشاء حساب",
     politics_title: "الخبر نيوز - السياسة",
+    sports_title: "الخبر نيوز - الرياضة",
     technology_title: "الخبر نيوز - التكنولوجيا"
   },
   en: {
