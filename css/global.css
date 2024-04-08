@@ -140,6 +140,9 @@ img {
   align-items: center;
   gap: 10px;
 }
+html[dir="rtl"] .logo-link {
+  flex-direction: row-reverse;  
+}
 
 .header__logo {
   width: 60px;

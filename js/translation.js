@@ -44,7 +44,14 @@ const translations = {
     enter_your_phone_number: "أدخل رقم هاتفك",
     send: "إرسال",
     we_love_connect: "نرغب في أن تراسلنا",
-    by: "بواسطة"
+    by: "بواسطة",
+    contact_title: "الخبر نيوز - تواصل معنا",
+    economy_title: "الخبر نيوز - الاقتصاد",
+    home_title: "الخبر نيوز - الصفحة الرئيسية",
+    login_title: "الخبر نيوز - تسجيل الدخول",
+    news_title: "الخبر نيوز - الخبر",
+    politics_title: "الخبر نيوز - السياسة",
+    technology_title: "الخبر نيوز - التكنولوجيا"
   },
   en: {
     contact: "Contact",
@@ -91,7 +98,16 @@ const translations = {
     enter_your_phone_number: "Enter Your Phone Number",
     send: "Send",
     we_love_connect: "We'd Love To Connect With You",
-    by: "By"
+    by: "By",
+    contact_title: "El-khabar News - Contact",
+    economy_title: "El-khabar News - Economy",
+    home_title: "El-khabar News - Home",
+    login_title: "El-khabar News - Login",
+    news_title: "El-khabar News - News",
+    politics_title: "El-khabar News - Politics",
+    signup_title: "El-khabar News - Signup",
+    sports_title: "El-khabar News - Sports",
+    technology_title: "El-khabar News - Technology"
   }
 }
 
