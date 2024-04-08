@@ -36,16 +36,29 @@ inputFields.forEach(inputField => {
 
 
 function formValidation() {
+  const websiteLanguage = localStorage.getItem('lang') || 'en';
+
+  const errorsTranslations = {
+    ar: {
+      enter_valid_email: "أدخل بريدًا إلكترونيًا صحيحًا.",
+      password_6_chars: "يجب أن تتكون كلمة السر من 6 أحرف على الأقل.",
+    },
+    en: {
+      enter_valid_email: "Enter a valid Email.",
+      password_6_chars: "Password must be at least 6 characters.",
+    }
+  }
+
   const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userEmail.value);
   const validPassword = userPassword.value.length >= 6;
 
   if (!validEmail) {
-    document.querySelector(`.email-error-msg`).innerHTML = 'Enter a valid Email.';
-    document.querySelector(`.email-error-msg`).classList.add('error-msg--visible')
+    document.querySelector(`.email-error-msg`).innerHTML = errorsTranslations[websiteLanguage].enter_valid_email;
+    document.querySelector(`.email-error-msg`).classList.add('error-msg--visible');
   }
   if (!validPassword) {
-    document.querySelector(`.password-error-msg`).innerHTML = 'Must be at least 6 characters.';
-    document.querySelector(`.password-error-msg`).classList.add('error-msg--visible')
+    document.querySelector(`.password-error-msg`).innerHTML = errorsTranslations[websiteLanguage].password_6_chars;
+    document.querySelector(`.password-error-msg`).classList.add('error-msg--visible');
   }
 
   return validEmail && validPassword;
@@ -54,7 +67,7 @@ function formValidation() {
 loginBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
-  if (formValidation()) {
+    if (formValidation()) {
     const userEmail = document.querySelector('#email-el').value;
     const userPassword = document.querySelector('#password-el').value;
   

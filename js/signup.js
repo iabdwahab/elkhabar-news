@@ -34,6 +34,25 @@ inputFields.forEach(inputField => {
 
 
 function formValidation() {
+  const websiteLanguage = localStorage.getItem('lang') || 'en';
+
+  const errorsTranslations = {
+    ar: {
+      enter_valid_email: "أدخل بريدًا إلكترونيًا صحيحًا.",
+      password_6_chars: "يجب أن تتكون كلمة السر من 6 أحرف على الأقل.",
+      characters_3: "على الأقل 3 أحرف.",
+      same_passwords: "يجب تطابق كلمتي السر."
+    },
+    en: {
+      enter_valid_email: "Enter a valid Email.",
+      password_6_chars: "Password must be at least 6 characters.",
+      characters_3: "Must be at least 3 characters.",
+      same_passwords: "Passwords must be the same."
+    }
+  }
+
+
+
   const validFirstName = userFirstName.value.length >= 3;
   const validLastName = userFirstName.value.length >= 3;
   const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userEmail.value);
@@ -41,23 +60,23 @@ function formValidation() {
   const validPasswordConfirm = userConfirmPassword.value === userPassword.value;
 
   if (!validFirstName) {
-    document.querySelector(`.first_name-error-msg`).innerHTML = 'Must be at least 3 characters.';
+    document.querySelector(`.first_name-error-msg`).innerHTML = errorsTranslations[websiteLanguage].characters_3;
     document.querySelector(`.first_name-error-msg`).classList.add('error-msg--visible')
   }
   if (!validLastName) {
-    document.querySelector(`.last_name-error-msg`).innerHTML = 'Must be at least 3 characters.';
+    document.querySelector(`.last_name-error-msg`).innerHTML = errorsTranslations[websiteLanguage].characters_3;
     document.querySelector(`.last_name-error-msg`).classList.add('error-msg--visible')
   }
   if (!validEmail) {
-    document.querySelector(`.email-error-msg`).innerHTML = 'Enter a valid Email.';
+    document.querySelector(`.email-error-msg`).innerHTML = errorsTranslations[websiteLanguage].enter_valid_email;
     document.querySelector(`.email-error-msg`).classList.add('error-msg--visible')
   }
   if (!validPassword) {
-    document.querySelector(`.password-error-msg`).innerHTML = 'Must be at least 6 characters.';
+    document.querySelector(`.password-error-msg`).innerHTML = errorsTranslations[websiteLanguage].password_6_chars;
     document.querySelector(`.password-error-msg`).classList.add('error-msg--visible')
   }
   if (!validPasswordConfirm) {
-    document.querySelector(`.confirm_password-error-msg`).innerHTML = 'Passwords must be the same.';
+    document.querySelector(`.confirm_password-error-msg`).innerHTML = errorsTranslations[websiteLanguage].same_passwords;
     document.querySelector(`.confirm_password-error-msg`).classList.add('error-msg--visible')
   }
 

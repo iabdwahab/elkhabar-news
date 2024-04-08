@@ -67,6 +67,8 @@ const translations = {
     forgot_password: "Forgot Password?",
     enter_your_password: "Enter your Password",
     enter_your_email: "Enter your Email",
+    new_user: "New User?",
+    signup: "Signup",
     login_to_your_account: "Login To Your Account",
     enter_your_first_name: "Enter your first name",
     enter_your_last_name: "Enter your last name",
@@ -80,10 +82,9 @@ const translations = {
   }
 }
 
-// window.addEventListener('load', () => {
+window.addEventListener('load', () => {
+  const defaultLang = localStorage.getItem('lang') || 'en';
   
-  if (localStorage.getItem('lang')) {
-    const defaultLang = localStorage.getItem('lang');
     changeLanguage(defaultLang);
 
     document.querySelector(`option[value=${defaultLang}]`).selected = true;
@@ -93,9 +94,8 @@ const translations = {
     } else if (defaultLang === 'en') {
       document.dir = 'ltr';
     }
-  }
 
-// });
+});
 
 
 const langSwitcher = document.querySelector('#language-selector');
@@ -103,17 +103,11 @@ const langSwitcher = document.querySelector('#language-selector');
 langSwitcher.addEventListener('change', () => {
   const selectedLang = langSwitcher.value;
 
-  // Change Text Language Depending on user selected language
-  changeLanguage(selectedLang);
-
-  if (selectedLang === 'ar') {
-    document.dir = 'rtl';
-  } else if (selectedLang === 'en') {
-    document.dir = 'ltr';
-  }
-
   // Save Selected Language In LocalStorage
   localStorage.setItem('lang', selectedLang);
+
+  // Reload after changing language
+  location.reload();
 });
 
 
