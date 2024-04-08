@@ -70,6 +70,10 @@
   border-radius: 0 4px 4px 0;
   font-size: 20px;
 }
+html[dir="rtl"] .hide-password-btn {
+  left: 2px;
+  right: unset;
+}
 
 .form__forgot-link {
   font-size: 14px;

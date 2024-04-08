@@ -30,7 +30,7 @@
       </a>
     </div>
 
-    <a aria-label="label" href="contact.html" class="header__contact-link">Contact</a>
+    <a aria-label="label" href="contact.html" class="header__contact-link" data-translate-name="contact">Contact</a>
   </header>
 
   <nav class="sub-header">
@@ -53,51 +53,51 @@
 
 
       <ul class="sub-header__navigation">
-        <li><a aria-label="label" href="index.html" class="sub-header__link">Home</a></li>
-        <li><a aria-label="label" href="politics.html" class="sub-header__link">Politics</a></li>
-        <li><a aria-label="label" href="sports.html" class="sub-header__link">Sports</a></li>
-        <li><a aria-label="label" href="economy.html" class="sub-header__link  sub-header__link--active">Economy</a></li>
-        <li><a aria-label="label" href="technology.html" class="sub-header__link">Technology</a></li>
+        <li><a aria-label="label" href="index.html" class="sub-header__link" data-translate-name="home">Home</a></li>
+        <li><a aria-label="label" href="politics.html" class="sub-header__link" data-translate-name="politics">Politics</a></li>
+        <li><a aria-label="label" href="sports.html" class="sub-header__link" data-translate-name="sports">Sports</a></li>
+        <li><a aria-label="label" href="economy.html" class="sub-header__link  sub-header__link--active" data-translate-name="economy">Economy</a></li>
+        <li><a aria-label="label" href="technology.html" class="sub-header__link" data-translate-name="technology">Technology</a></li>
       </ul>
 
       <div class="sub-header__user-elements">
-        <p class="sub-header__username">Ibrahim AbdElwahab</p>
-        <a aria-label="label" href="login.html" class="sub-header__login-btn">Login</a>
-        <button aria-label="label" href="login.html" class="sub-header__logout-btn">Logout</button>
+        <p class="sub-header__username"></p>
+        <a aria-label="label" href="login.html" class="sub-header__login-btn" data-translate-name="login">Login</a>
+        <button aria-label="label" href="login.html" class="sub-header__logout-btn" data-translate-name="logout">Logout</button>
       </div>
     </div>
   </nav>
 
   <main class="main-section">
     <div class="container">
-      <h2 class="main__heading">Signup To Create Your Account</h2>
+      <h2 class="main__heading" data-translate-name="signup_to_create_your_account">Signup To Create Your Account</h2>
 
-      <form method="post" class="form" autocomplete="on">
+      <form method="post" class="form">
         <div class="form__name">
           <div class="form__child name__first">
-            <label for="first-name-el">First Name</label>
-            <input required type="text" name="first_name" id="first-name-el" class="input-field" placeholder="Enter Your First Name">
+            <label for="first-name-el" data-translate-name="first_name">First Name</label>
+            <input required type="text" name="first_name" id="first-name-el" class="input-field" placeholder="Enter Your First Name" data-translate-name="enter_your_first_name">
             <p class="error-msg first_name-error-msg">The first name field must be at least 3 characters.</p>
           </div>
 
           <div class="form__child name__last">
-            <label for="last-name-el">Last Name</label>
-            <input required type="text" name="last_name" id="last-name-el" class="input-field" placeholder="Enter Your Last Name">
+            <label for="last-name-el" data-translate-name="last_name">Last Name</label>
+            <input required type="text" name="last_name" id="last-name-el" class="input-field" placeholder="Enter Your Last Name" data-translate-name="enter_your_last_name">
             <p class="error-msg last_name-error-msg">The last name field must be at least 3 characters.</p>
           </div>
 
         </div> <!-- ./form__name -->
 
         <div class="form__child form__email">
-          <label for="email-el">Email</label>
-          <input required type="email" name="email" id="email-el" class="input-field" placeholder="Enter Your Email">
+          <label for="email-el" data-translate-name="email">Email</label>
+          <input required type="email" name="email" id="email-el" class="input-field" placeholder="Enter Your Email" data-translate-name="enter_your_email">
           <p class="error-msg email-error-msg">The email field must be a valid email address.</p>
         </div>
 
         <div class="form__child form__password">
-          <label for="password-el">Password</label>
+          <label for="password-el" data-translate-name="password">Password</label>
           <div class="form__password-container">
-            <input required type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password">
+            <input required type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password" data-translate-name="enter_your_password">
             <button type="button" class="hide-password-btn">
               <i class="fa-regular fa-eye"></i>
             </button>
@@ -106,9 +106,9 @@
         </div>
 
         <div class="form__child form__password">
-          <label for="password-el">Confirm Password</label>
+          <label for="password-el" data-translate-name="confirm_password">Confirm Password</label>
           <div class="form__password-container">
-            <input required type="password" name="confirm_password" id="confirm-password-el" class="input-field" placeholder="Re-enter Your Password">
+            <input required type="password" name="confirm_password" id="confirm-password-el" class="input-field" placeholder="Re-enter Your Password" data-translate-name="re_enter_your_password">
             <button type="button" class="hide-password-btn">
               <i class="fa-regular fa-eye"></i>
             </button>
@@ -116,8 +116,8 @@
           <p class="error-msg confirm_password-error-msg">Passwords must be the same.</p>
         </div>
   
-        <input type="submit" value="Signup" id="submit-btn" class="log-btn">
-        <p class="form__new-user">Already A Member? <a aria-label="label" href="login.html" class="another-log-link">Login</a></p>
+          <input type="submit" value="Signup" id="submit-btn" class="log-btn" data-translate-name="signup">
+          <p class="form__new-user"><span data-translate-name="already_member">Already A Member?</span> <a aria-label="label" href="login.html" class="another-log-link" data-translate-name="login">Login</a></p>
   
       </form>
     </div>
@@ -131,7 +131,7 @@
       </a>
 
       <div class="footer__social">
-        <h4 class="footer-social__heading">Find Us In Social Media</h4>
+        <h4 class="footer-social__heading" data-translate-name="find_us_in_social_media">Find Us In Social Media</h4>
         <ul class="footer-social__list">
           <li>
             <a aria-label="label" href="#" class="footer-social__link"><i class="fa-brands fa-facebook-f footer-social__icon"></i></a>
@@ -149,31 +149,31 @@
       </div> <!-- ./footer__social -->
 
       <nav class="footer__nav footer__categories">
-        <h4 class="footer-nav__heading">Categoris</h4>
+        <h4 class="footer-nav__heading" data-translate-name="categories">Categories</h4>
         <ul class="footer-nav__list footer-categories__list">
           <li>
-            <a aria-label="label" href="index.html" class="footer-nav__link footer-categories__link">Home</a>
+            <a aria-label="label" href="index.html" class="footer-nav__link footer-categories__link" data-translate-name="home">Home</a>
           </li>
           <li>
-            <a aria-label="label" href="politics.html" class="footer-nav__link footer-categories__link">Politics</a>
+            <a aria-label="label" href="politics.html" class="footer-nav__link footer-categories__link" data-translate-name="politics">Politics</a>
           </li>
           <li>
-            <a aria-label="label" href="economy.html" class="footer-nav__link footer-categories__link">Economy</a>
+            <a aria-label="label" href="economy.html" class="footer-nav__link footer-categories__link" data-translate-name="economy">Economy</a>
           </li>
           <li>
-            <a aria-label="label" href="sports.html" class="footer-nav__link footer-categories__link">Sports</a>
+            <a aria-label="label" href="sports.html" class="footer-nav__link footer-categories__link" data-translate-name="sports">Sports</a>
           </li>
           <li>
-            <a aria-label="label" href="technology.html" class="footer-nav__link footer-categories__link">Technology</a>
+            <a aria-label="label" href="technology.html" class="footer-nav__link footer-categories__link" data-translate-name="technology">Technology</a>
           </li>
         </ul>
       </nav> <!-- ./footer__categories -->
 
       <nav class="footer__nav footer__community">
-        <h4 class="footer-nav__heading">Community</h4>
+        <h4 class="footer-nav__heading" data-translate-name="community">Community</h4>
         <ul class="footer-nav__list footer-community__list">
           <li>
-            <a aria-label="label" href="contact.html" class="footer-nav__link footer-community__link">Contact Us</a>
+            <a aria-label="label" href="contact.html" class="footer-nav__link footer-community__link" data-translate-name="contact_us">Contact Us</a>
           </li>
         </ul>
       </nav>

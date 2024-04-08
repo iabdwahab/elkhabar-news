@@ -20,7 +20,24 @@ const translations = {
     ad: "إعلان",
     featured_news: "خبر مميز",
     latest_news: "آخر الأخبار",
-    load_more: "تحميل المزيد"
+    load_more: "تحميل المزيد",
+    password_6_characters: "كلمة السر يجب أن تتكون من 6 أحرف على الأقل.",
+    email: "البريد الإلكتروني",
+    password: "كلمة السر",
+    forgot_password: "نسيت كلمة السر؟",
+    enter_your_password: "أدخل كلمة السر",
+    enter_your_email: "أدخل البريد الإلكتروني",
+    new_user: "مستخدم جديد؟",
+    signup: "سجل حسابك",
+    login_to_your_account: "تسجيل الدخول إلى حسابك",
+    enter_your_first_name: "أدخل اسمك الأول",
+    enter_your_last_name: "أدخل اسمك الأخير",
+    re_enter_your_password: "أعد كتابة كلمة السر",
+    first_name: "الاسم الأول",
+    last_name: "الاسم الأخير",
+    signup_to_create_your_account: "سجل لإنشاء حسابك",
+    already_member: "مستخدم حالي؟",
+    confirm_password: "تأكيد كلمة السر"
   },
   en: {
     contact: "Contact",
@@ -40,10 +57,26 @@ const translations = {
     categories: "Categories",
     find_us_in_social_media: "Find Us In Social Media",
     community: "Community",
-    ad: "ad",
+    ad: "Ad",
     featured_news: "Featured News",
     latest_news: "Latest News",
-    load_more: "Load More"
+    load_more: "Load More",
+    password_6_characters: "The password field must be at least 6 characters.",
+    email: "Email",
+    password: "Password",
+    forgot_password: "Forgot Password?",
+    enter_your_password: "Enter your Password",
+    enter_your_email: "Enter your Email",
+    login_to_your_account: "Login To Your Account",
+    enter_your_first_name: "Enter your first name",
+    enter_your_last_name: "Enter your last name",
+    re_enter_your_password: "Re-Enter your password",
+    first_name: "First Name",
+    last_name: "Last Name",
+    signup_to_create_your_account: "Singup To Create Your Account",
+    already_member: "Already A Memebr?",
+    confirm_password: "Confirm Password"
+
   }
 }
 
@@ -88,16 +121,20 @@ function changeLanguage(lang) {
   const elements = document.querySelectorAll('[data-translate-name]');
 
   elements.forEach(el => {
-    el.innerHTML = translations[lang][el.dataset.translateName];
+
+    if (el.nodeName === 'INPUT') {
+
+      if (el.type === 'submit') {
+        el.value = translations[lang][el.dataset.translateName];
+      } else {
+        el.placeholder = translations[lang][el.dataset.translateName];
+      }
+
+    } else {
+      el.innerHTML = translations[lang][el.dataset.translateName];
+    }
+
   });
 
-  // for (const property in translations[lang]) {
-  //   const elements = document.querySelectorAll(`[data-translate-name="${property}"]`)
-    
-  //   if (elements.length) {
-  //     elements.forEach(el => {
-  //       el.innerHTML = translations[lang][property]
-  //     });
-  //   }
-  // }
+
 }
