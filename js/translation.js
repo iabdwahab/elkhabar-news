@@ -43,7 +43,8 @@ const translations = {
     phone: "رقم الهاتف",
     enter_your_phone_number: "أدخل رقم هاتفك",
     send: "إرسال",
-    we_love_connect: "نرغب في أن تراسلنا"
+    we_love_connect: "نرغب في أن تراسلنا",
+    by: "بواسطة"
   },
   en: {
     contact: "Contact",
@@ -89,8 +90,8 @@ const translations = {
     phone: "Phone",
     enter_your_phone_number: "Enter Your Phone Number",
     send: "Send",
-    we_love_connect: "We'd Love To Connect With You"
-
+    we_love_connect: "We'd Love To Connect With You",
+    by: "By"
   }
 }
 
@@ -124,22 +125,29 @@ langSwitcher.addEventListener('change', () => {
 
 
 function changeLanguage(lang) {
+  // Every element that can be translated
   const elements = document.querySelectorAll('[data-translate-name]');
+
 
   elements.forEach(el => {
 
     if (el.nodeName === 'INPUT') {
 
       if (el.type === 'submit') {
+        // If element is [type="submit"] => {{{{value}}}} will change
         el.value = translations[lang][el.dataset.translateName];
+
       } else {
+        // If element is [input] => {{{{placeholder}}}} will change
         el.placeholder = translations[lang][el.dataset.translateName];
       }
 
     } else if (el.nodeName === 'TEXTAREA') {
+      // If element is [textarea] => {{{{placeholder}}}} will change
       el.placeholder = translations[lang][el.dataset.translateName];
 
     } else {
+      // If element is not [textarea] or [input] => {{{{innerHTML}}}} will change
       el.innerHTML = translations[lang][el.dataset.translateName];
     }
 
