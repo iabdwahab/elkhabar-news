@@ -7,13 +7,14 @@
 
 .main-section .container {
   display: grid;
-  grid-template-columns: 1fr 500px;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
 .main__heading {
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
+
 }
 
 .form {
@@ -46,6 +47,10 @@
   border-color: var(--main-color);
 }
 
+
+html[dir="rtl"] #phone-el {
+  direction: rtl;
+}
 
 .form__message {
   resize: none;

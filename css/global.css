@@ -80,6 +80,16 @@ body {
   position: relative;
 }
 
+.error-msg {
+  text-align: start;
+  color: var(--main-color);
+  font-size: 14px;
+  display: none; 
+}
+.error-msg--visible {
+  display: block;
+}
+
 .container {
   max-width: 95%;
   margin-left: auto;
@@ -228,6 +238,16 @@ img {
   background-color: #EC1616;
   position: absolute;
   left: 0;
+  top: calc(100% + 2px);
+}
+html[dir="rtl"] .sub-header__link--active::after {
+  content: '';
+  width: 60%;
+  height: 2px;
+  background-color: #EC1616;
+  position: absolute;
+  left: unset;
+  right: 0;
   top: calc(100% + 2px);
 }
 

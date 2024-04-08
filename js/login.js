@@ -55,10 +55,12 @@ function formValidation() {
   if (!validEmail) {
     document.querySelector(`.email-error-msg`).innerHTML = errorsTranslations[websiteLanguage].enter_valid_email;
     document.querySelector(`.email-error-msg`).classList.add('error-msg--visible');
+    userEmail.classList.add('input-field--error');
   }
   if (!validPassword) {
     document.querySelector(`.password-error-msg`).innerHTML = errorsTranslations[websiteLanguage].password_6_chars;
     document.querySelector(`.password-error-msg`).classList.add('error-msg--visible');
+    userPassword.classList.add('input-field--error');
   }
 
   return validEmail && validPassword;

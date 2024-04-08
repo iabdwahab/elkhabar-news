@@ -37,7 +37,13 @@ const translations = {
     last_name: "الاسم الأخير",
     signup_to_create_your_account: "سجل لإنشاء حسابك",
     already_member: "مستخدم حالي؟",
-    confirm_password: "تأكيد كلمة السر"
+    confirm_password: "تأكيد كلمة السر",
+    message: "الرسالة",
+    enter_your_message: "أدخل رسالتك",
+    phone: "رقم الهاتف",
+    enter_your_phone_number: "أدخل رقم هاتفك",
+    send: "إرسال",
+    we_love_connect: "نرغب في أن تراسلنا"
   },
   en: {
     contact: "Contact",
@@ -77,7 +83,13 @@ const translations = {
     last_name: "Last Name",
     signup_to_create_your_account: "Singup To Create Your Account",
     already_member: "Already A Memebr?",
-    confirm_password: "Confirm Password"
+    confirm_password: "Confirm Password",
+    message: "Message",
+    enter_your_message: "Enter your message",
+    phone: "Phone",
+    enter_your_phone_number: "Enter Your Phone Number",
+    send: "Send",
+    we_love_connect: "We'd Love To Connect With You"
 
   }
 }
@@ -123,6 +135,9 @@ function changeLanguage(lang) {
       } else {
         el.placeholder = translations[lang][el.dataset.translateName];
       }
+
+    } else if (el.nodeName === 'TEXTAREA') {
+      el.placeholder = translations[lang][el.dataset.translateName];
 
     } else {
       el.innerHTML = translations[lang][el.dataset.translateName];
