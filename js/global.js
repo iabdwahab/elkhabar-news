@@ -30,3 +30,47 @@ closeMenuIcon.addEventListener('click', () => {
   burgerMenu.classList.remove('show');
 });
 
+
+function formatDate(date) {
+  splittedDate = date.slice(0, 10).split('-');
+
+  const year = splittedDate[0];
+  const monthNumber = splittedDate[1];
+  const day = splittedDate[2];
+
+  console.log(monthNumber)
+
+  const monthsName = {
+    "01": "Jan",
+    "02": "Feb",
+    "03": "Mar",
+    "04": "Apr",
+    "05": "May",
+    "06": "Jun",
+    "07": "Jul",
+    "08": "Aug",
+    "09": "Sep",
+    "10": "Oct",
+    "11": "Nov",
+    "12": "Dec"
+  }
+
+  // st || nd || rd || th
+  let dayPostfix;
+
+  if (+day === 1) {
+    dayPostfix = 'st';
+
+  } else if (+day === 2) {
+    dayPostfix = 'nd';
+  
+  } else if (+day === 3) {
+    dayPostfix = 'rd';
+  
+  } else {
+    dayPostfix = 'th';
+  }
+
+
+  return `${day}${dayPostfix} ${monthsName[monthNumber]} ${year}`;
+}

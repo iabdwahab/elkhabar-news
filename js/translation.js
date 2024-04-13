@@ -146,7 +146,6 @@ function changeLanguage(lang) {
   // Every element that can be translated
   const elements = document.querySelectorAll('[data-translate-name]');
 
-
   elements.forEach(el => {
 
     if (el.nodeName === 'INPUT') {
@@ -168,8 +167,5 @@ function changeLanguage(lang) {
       // If element is not [textarea] or [input] => {{{{innerHTML}}}} will change
       el.innerHTML = translations[lang][el.dataset.translateName];
     }
-
   });
-
-
 }

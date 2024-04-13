@@ -2,7 +2,6 @@ if (localStorage.getItem('userInfo')) {
   window.location.href = './index.html';
 }
 
-
 changePasswordVisibility();
 
 function changePasswordVisibility() {

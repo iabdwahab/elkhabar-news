@@ -81,16 +81,16 @@
 } 
 
 /* Style Layout of main head-lines */
-.hero-news-first {
+.hero-news-0 {
   grid-area: 1 / 1 / 3 / 2;
 }
-.hero-news-second {
+.hero-news-1 {
   grid-area: 1 / 2 / 2 / 4;
 }
-.hero-news-third {
+.hero-news-2 {
   grid-area: 2 / 2 / 3 / 3;
 }
-.hero-news-fourth {
+.hero-news-3 {
   grid-area: 2 / 3 / 3 / 4;
 }
 
@@ -134,7 +134,8 @@
   margin-bottom: 20px;
 }
 .content__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .content__heading {
