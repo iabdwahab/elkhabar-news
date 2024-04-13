@@ -85,6 +85,7 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
     // ##############
 
 
-
+    // Hide Loader from Page
+    document.querySelector('.loader-container').style.display = 'none';
   })
   .catch(error => console.log('error', error));

@@ -2,10 +2,8 @@
 const pageCategory = document.querySelector('html').dataset.pageCategory;
 const websiteLang = localStorage.getItem('lang') || 'en';
 
-
 const latestCardsContainer = document.querySelector('.latest__cards');
 const normalNewsContainer = document.querySelector('.section-news__container');
-
 
 
 // Fetching Function
@@ -23,7 +21,9 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=8`
   .then(result => {
     console.log(result);
 
-
+    // ############
+    // Start Latest
+    // ############
     const latestResult = result.data.latest;
     let latestHTML = '';
 
@@ -51,7 +51,9 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=8`
     }
 
     latestCardsContainer.innerHTML = latestHTML;
-
+    // ############
+    // End Latest
+    // ############
 
 
     // #########
@@ -81,7 +83,15 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=8`
     }
 
     normalNewsContainer.innerHTML = normalHTML;
+    // #########
+    // End content Cards
+    // #########
 
+
+    // Hide Loader from Page
+    document.querySelector('.loader-container').style.display = 'none';
   })
   .catch(error => console.log('error', error));
+
+
 
