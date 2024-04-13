@@ -44,6 +44,7 @@
   font-size: 14px;
   border-radius: 4px;
   color: var(--second-color);
+  text-transform: capitalize;
 }
 .hero-news__date {
   color: var(--main-color);

@@ -40,8 +40,6 @@ function formatDate(date) {
   const monthNumber = splittedDate[1];
   const day = splittedDate[2];
 
-  console.log(monthNumber)
-
   let monthsName;
 
   if (websiteLang === 'ar') {
@@ -60,7 +58,7 @@ function formatDate(date) {
       "12": "ديسمبر"
     }
 
-    return `${+day} ${monthsName[monthNumber]} ${year}`;
+    return `${Number(day)} ${monthsName[monthNumber]} ${year}`;
   } 
 
 
@@ -96,5 +94,5 @@ function formatDate(date) {
     dayPostfix = 'th';
   }
 
-  return `${day}${dayPostfix} ${monthsName[monthNumber]} ${year}`;
+  return `${Number(day)}${dayPostfix} ${monthsName[monthNumber]} ${year}`;
 }
