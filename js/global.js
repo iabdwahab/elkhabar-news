@@ -31,6 +31,7 @@ closeMenuIcon.addEventListener('click', () => {
 });
 
 
+// Formatting Date
 function formatDate(date) {
   const websiteLang = localStorage.getItem('lang') || 'en';
 
@@ -78,7 +79,7 @@ function formatDate(date) {
     "12": "Dec"
   }
 
-  // st || nd || rd || th
+  // 1st || 2nd || 3rd || 4th || 5th ...
   let dayPostfix;
 
   if (+day === 1) {

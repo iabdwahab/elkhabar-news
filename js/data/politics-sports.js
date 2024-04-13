@@ -2,6 +2,7 @@
 const pageCategory = document.querySelector('html').dataset.pageCategory;
 const websiteLang = localStorage.getItem('lang') || 'en';
 
+const featuredSectionEl = document.querySelector('.featured__section');
 const latestCardsContainer = document.querySelector('.latest__cards');
 const normalNewsContainer = document.querySelector('.section-news__container');
 
@@ -20,6 +21,34 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=8`
   .then(response => response.json())
   .then(result => {
     console.log(result);
+
+
+    // ##############
+    // Start Featured
+    // ##############
+
+    const featuredResult = result.data.featured;
+    
+    featuredSectionEl.innerHTML = `
+      <a aria-label="label" href="#">
+        <img src="${featuredResult.image_url}" alt="image" class="featured-card__image">
+      </a>
+      <a aria-label="label" href="#">
+        <h3 class="featured-card__title card__title">${featuredResult.title[websiteLang]}</h3>
+      </a>
+      <div class="featured-card__details">
+        <p class="featured-card__author">${featuredResult.publisher}</p>
+        <p class="featured-card__date">${formatDate(featuredResult.date)}</p>
+      </div>
+      <p class="featured-card__description">${featuredResult.content[websiteLang]}</p>
+    
+    `
+
+    // ##############
+    // End Featured
+    // ##############
+
+
 
     // ############
     // Start Latest
