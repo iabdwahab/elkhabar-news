@@ -32,6 +32,8 @@ closeMenuIcon.addEventListener('click', () => {
 
 
 function formatDate(date) {
+  const websiteLang = localStorage.getItem('lang') || 'en';
+
   splittedDate = date.slice(0, 10).split('-');
 
   const year = splittedDate[0];
@@ -40,7 +42,30 @@ function formatDate(date) {
 
   console.log(monthNumber)
 
-  const monthsName = {
+  let monthsName;
+
+  if (websiteLang === 'ar') {
+    monthsName = {
+      "01": "يناير",
+      "02": "فبراير",
+      "03": "مارس",
+      "04": "أبريل",
+      "05": "مايو",
+      "06": "يونية",
+      "07": "يوليو",
+      "08": "أغسطس",
+      "09": "سبتمبر",
+      "10": "أكتوبر",
+      "11": "نوفمبر",
+      "12": "ديسمبر"
+    }
+
+    return `${+day} ${monthsName[monthNumber]} ${year}`;
+  } 
+
+
+  // If websiteLang === English:
+  monthsName = {
     "01": "Jan",
     "02": "Feb",
     "03": "Mar",
@@ -70,7 +95,6 @@ function formatDate(date) {
   } else {
     dayPostfix = 'th';
   }
-
 
   return `${day}${dayPostfix} ${monthsName[monthNumber]} ${year}`;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
   --main-color: #EC1616;
   --second-color: #fff;
@@ -72,11 +74,10 @@ aside img {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: Inter, san-serif;
 }
 
-
 body {
-  font-family: Inter, san-serif;
   position: relative;
 }
 

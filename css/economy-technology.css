@@ -230,7 +230,6 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   gap: 20px;
 }
 .featured__card {
-  border: 5px solid black;
   position: relative;
   display: flex;
   align-items: end;
