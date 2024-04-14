@@ -14,22 +14,26 @@ var requestOptions = {
 fetch(`https://blog.ammarelgendy.online/api/new/${slug}`, requestOptions)
   .then(response => response.json())
   .then(result => {
-    console.log(result)
+    console.log(result);
     const data = result.data
+
+    document.title = data.title[websiteLang];
 
     newsContainer.innerHTML = `
       <p class="news__date">${formatDate(data.date)}</p>
       <h1 class="news__title">${data.title[websiteLang]}</h1>
       
       <div class="news__author-text">
-        <p class="news__by-word" data-translate-name="by">By</p>
+        <p class="news__by-word">${websiteLang === 'en' ? 'By' : 'بواسطة'}</p>
         <p class="news__author">${data.publisher}</p>
       </div>
 
       <img src="${data.image_url}" alt="image" class="news__image">
 
       <p class="news__body">${data.content[websiteLang]}</p>
-    `
+    `;
 
+    // Hide Loader from Page
+    document.querySelector('.loader-container').style.display = 'none';
   })
   .catch(error => console.log('error', error));
