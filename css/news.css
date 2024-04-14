@@ -16,7 +16,7 @@
   font-size: 14px;
 }
 
-.news__author-text {
+.news__publisher-text {
   display: flex;
   gap: 10px;
   color: var(--fourth-color);

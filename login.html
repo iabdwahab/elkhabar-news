@@ -73,14 +73,14 @@
       <form class="form">
         <div class="form__child form__email">
           <label for="email-el" data-translate-name="email">Email</label>
-          <input required value="" type="email" name="email" id="email-el" class="input-field" placeholder="Enter Your Email"  data-translate-name="enter_your_email">
+          <input value="" type="email" name="email" id="email-el" class="input-field" placeholder="Enter Your Email"  data-translate-name="enter_your_email">
           <p class="error-msg email-error-msg" data-translate-name="valid_email">The email field must be a valid email address.</p>
         </div>
   
         <div class="form__child form__password">
           <label for="password-el" data-translate-name="password">Password</label>
           <div class="form__password-container">
-            <input required type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password" data-translate-name="enter_your_password">
+            <input type="password" name="password" id="password-el" class="input-field" placeholder="Enter Your Password" data-translate-name="enter_your_password">
             <button type="button" class="hide-password-btn">
               <i class="fa-regular fa-eye"></i>
             </button>
@@ -155,7 +155,7 @@
   </footer>
 
   <script src="js/global.js"></script>
-  <script src="js/login.js"></script>
+  <script type="module" src="js/login.js"></script>
   <script src="js/translation.js"></script>
 </body>
 </html>

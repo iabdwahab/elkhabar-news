@@ -51,8 +51,6 @@ function formValidation() {
     }
   }
 
-
-
   const validFirstName = userFirstName.value.length >= 3;
   const validLastName = userFirstName.value.length >= 3;
   const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userEmail.value);

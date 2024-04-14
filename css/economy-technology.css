@@ -251,11 +251,11 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   color: var(--main-color);
   font-weight: 600;
 }
-.featured-card__author {
+.featured-card__publisher {
   color: var(--fourth-color);
   font-weight: 600;
 }
-.featured-card__author {
+.featured-card__publisher {
   color: var(--fourth-color);
   font-weight: 600;
 }

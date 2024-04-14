@@ -54,7 +54,7 @@
 .slideshow__date {
   color: var(--main-color);
 }
-.slideshow__author {
+.slideshow__publisher {
   color: var(--fourth-color);
   margin-bottom: 10px;
 }

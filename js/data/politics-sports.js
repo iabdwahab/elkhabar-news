@@ -19,7 +19,7 @@ var requestOptions = {
 
 let normalNewsPageNum = 2;
 
-fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=2`, requestOptions)
+fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=1`, requestOptions)
   .then(response => response.json())
   .then(result => {
     console.log(result);
@@ -39,7 +39,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=2`, re
         <h3 class="featured-card__title card__title">${featuredResult.title[websiteLang]}</h3>
       </a>
       <div class="featured-card__details">
-        <p class="featured-card__author">${featuredResult.publisher}</p>
+        <p class="featured-card__publisher">${featuredResult.publisher}</p>
         <p class="featured-card__date">${formatDate(featuredResult.date)}</p>
       </div>
       <p class="featured-card__description">${featuredResult.content[websiteLang]}</p>
@@ -72,7 +72,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=2`, re
               <h3 class="latest__title card__title">${latestNews.title[websiteLang]}</h3>
             </a>
             <div class="latest__details">
-              <p class="latest__author">${latestNews.publisher}</p>
+              <p class="latest__publisher">${latestNews.publisher}</p>
               <p class="latest__date">${formatDate(latestNews.date)}</p>
             </div>
             <p class="latest__description">${latestNews.content[websiteLang]}</p>
@@ -105,7 +105,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=2`, re
           <h3 class="card__title">${normalNews.title[websiteLang]}</h3>
         </a>
         <div class="card__info">
-          <p class="card__author">${normalNews.publisher}</p>
+          <p class="card__publisher">${normalNews.publisher}</p>
           <p class="card__date">${formatDate(normalNews.date)}</p>
         </div>
         <p class="card__description">${normalNews.content[websiteLang]}</p>
