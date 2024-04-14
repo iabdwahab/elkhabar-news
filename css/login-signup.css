@@ -8,7 +8,7 @@
   padding-right: 10px;
 }
 
-.main-section .container {
+.main-section__container {
   background-color: #F5F5F5; 
   padding: 40px 40px 80px;
   max-width: 600px;
@@ -117,7 +117,7 @@ html[dir="rtl"] .hide-password-btn {
 
 
 @media (max-width: 768px) {
-  .main-section .container { 
+  .main-section__container { 
     padding: 40px 20px;
     max-width: 600px;
     border-radius: 4px;

@@ -70,7 +70,7 @@ img {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.features-section .container {
+.features-section__container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -106,7 +106,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   .features-section {
     margin-top: 0;
   }
-  .features-section .container {
+  .features-section__container {
     grid-template-columns: 1fr;
     /* gap: 40px; */
   }
@@ -133,7 +133,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 .content {
   margin-top: 20px;
 }
-.content .container {
+.content__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
@@ -209,7 +209,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
-  .content .container {
+  .content__container {
     grid-template-columns: 1fr;
     gap: 0;
   }
@@ -224,7 +224,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 .featured-section {
   margin-bottom: 20px;
 }
-.featured-section .container {
+.featured-section__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -274,7 +274,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 }
 
 @media (max-width: 768px) {
-  .featured-section .container {
+  .featured-section__container {
     grid-template-columns: 1fr;
   }
   .featured__card {

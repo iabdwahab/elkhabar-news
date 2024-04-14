@@ -28,14 +28,14 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
 
     resultMain.forEach((mainNews, index) => {
       mainContentHTML += `
-        <a aria-label="label" href="#" class="hero-news hero-news-${index}">
+        <a aria-label="label" href="news.html" class="hero-news hero-news-${index}" onclick="localStorage.setItem('slug', '${mainNews.slug}')">
           <img src="${mainNews.image_url}" alt="image" class="hero-news__image">
           <p class="hero-news__type">${mainNews.category.name}</p>
           <p class="hero-news__date">${formatDate(mainNews.date)}</p>
           <p class="hero-news__author">${mainNews.publisher}</p>
           <h3 class="hero-news__title">${mainNews.title[websiteLang]}</h3>
           <p class="hero-news__description">
-            ${mainNews.content.en}
+            ${mainNews.content[websiteLang]}
           </p>
         </a>
       `;
@@ -59,10 +59,10 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
       resultContent[section].forEach(sectionNews => {
         conentCardsHTML += `
         <div class="content__card">
-          <a aria-label="label" href="#">
+          <a aria-label="label" href="news.html" onclick="localStorage.setItem('slug', '${sectionNews.slug}')">
             <img src="${sectionNews.image_url}" alt="image" class="card__image">
           </a>
-          <a aria-label="label" href="#">
+          <a aria-label="label" href="news.html" onclick="localStorage.setItem('slug', '${sectionNews.slug}')">
             <h3 class="card__title">${sectionNews.title[websiteLang]}</h3>
           </a>
           <div class="card__info">

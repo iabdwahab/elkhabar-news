@@ -31,6 +31,12 @@ closeMenuIcon.addEventListener('click', () => {
 });
 
 
+// Fetch News
+function storageSlug(slug) {
+  localStorage.setItem('slug', slug)
+}
+
+
 // Formatting Date
 function formatDate(date) {
   const websiteLang = localStorage.getItem('lang') || 'en';

@@ -5,7 +5,7 @@
   margin-bottom: 30px;
 }
 
-.main-section .container {
+.main-section__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -73,7 +73,7 @@ html[dir="rtl"] #phone-el {
 }
 
 @media (max-width: 768px) {
-  .main-section .container {
+  .main-section__container {
     grid-template-columns: 1fr;
   }
   .form__name {

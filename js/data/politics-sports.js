@@ -17,7 +17,9 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=8`, requestOptions)
+let normalNewsPageNum = 2;
+
+fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=2`, requestOptions)
   .then(response => response.json())
   .then(result => {
     console.log(result);
@@ -88,16 +90,16 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=8`
     // #########
     // Start content Cards
     // #########
-    const normalResult = result.data.normal;
+    const normalResult = result.data.normal.data;
     let normalHTML = '';
 
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < normalResult.length; i++) {
       const normalNews = normalResult[i];
 
       normalHTML += `
       <div class="content__card">
         <a aria-label="label" href="#">
-          <img src="${normalNews.image_url}" alt="image" class="card__image">
+          <img src="${normalNews.image_url}" alt="image" class="card__image" onerror="this.src='assets/images/placeholder.webp'">
         </a>
         <a aria-label="label" href="#">
           <h3 class="card__title">${normalNews.title[websiteLang]}</h3>

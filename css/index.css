@@ -1,7 +1,7 @@
 @import url('global.css');
 
 /* Start main-content */
-.main-content .container {
+.main-content__container {
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr;
   grid-template-rows: 200px 200px;
@@ -103,7 +103,7 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .main-content .container {
+  .main-content__container {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
@@ -126,7 +126,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.content .container {
+.content__container {
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: 20px;
@@ -159,7 +159,7 @@ html[dir="rtl"] .content-heading__link i {
 }
 
 @media (max-width: 970px) {
-  .content .container {
+  .content__container {
     grid-template-columns: 1fr;
   }
   .content__cards {
