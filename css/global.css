@@ -118,6 +118,10 @@ img {
 }
 
 /* Loader */
+.load-more-btn__loader {
+  display: flex;
+  justify-content: center;
+}
 .loader-container {
   position: fixed;
   top: 0;
@@ -137,6 +141,16 @@ img {
   border: 8px solid var(--fourth-color);
   border-right-color: var(--main-color);
   animation: spinner 1s infinite linear;
+}
+.load-more-btn__loader {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 5px solid var(--fourth-color);
+  border-right-color: var(--main-color);
+  animation: spinner 1s infinite linear;
+  margin-left: auto;
+  margin-right: auto;
 }
 @keyframes spinner {to{transform: rotate(1turn)}}
 

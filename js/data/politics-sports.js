@@ -19,12 +19,9 @@ var requestOptions = {
 
 let normalNewsPageNum = 2;
 
-fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=1`, requestOptions)
+fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOptions)
   .then(response => response.json())
   .then(result => {
-    console.log(result);
-
-
     // ##############
     // Start Featured
     // ##############
@@ -90,7 +87,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=1`, re
     // #########
     // Start content Cards
     // #########
-    const normalResult = result.data.normal.data;
+    const normalResult = result.data.normal;
     let normalHTML = '';
 
     for (let i = 0; i < normalResult.length; i++) {
@@ -126,3 +123,65 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?page=1`, re
 
 
 
+
+const loadMoreBtn = document.querySelector('.load-more-btn');
+let loadMorePageNumber = 1;
+
+loadMoreBtn.addEventListener('click', (e) => {
+  // Add Loader on [Load More] Button when fetching new data
+  e.target.innerHTML = `<div class="load-more-btn__loader"></div>`
+
+  loadMorePageNumber++;
+
+  var myHeaders = new Headers();
+  myHeaders.append("Accept", "application/json");
+  
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+  
+  fetch(`https://blog.ammarelgendy.online/api/blogs/${pageCategory}?page=${loadMorePageNumber}`, requestOptions)
+    .then(response => response.json())
+    .then(result => {
+
+      console.log(result);
+      // Remove LoadMoreBtn when no data found
+      if (loadMorePageNumber >= result.data.last_page) {
+        loadMoreBtn.remove();
+      }
+
+      const news = result.data.data;
+
+      let newsHTML = '';
+
+      news.forEach((newsContent) => {
+
+        newsHTML += `
+        <div class="content__card">
+          <a aria-label="label" href="#">
+            <img src="${newsContent.image_url}" alt="image" class="card__image" onerror="this.src='assets/images/placeholder.webp'">
+          </a>
+          <a aria-label="label" href="#">
+            <h3 class="card__title">${newsContent.title[websiteLang]}</h3>
+          </a>
+          <div class="card__info">
+            <p class="card__publisher">${newsContent.publisher}</p>
+            <p class="card__date">${formatDate(newsContent.date)}</p>
+          </div>
+          <p class="card__description">${newsContent.content[websiteLang]}</p>
+        </div>
+        `
+        
+      });
+
+      console.log(news)
+
+      normalNewsContainer.innerHTML += newsHTML;
+
+      // Delete Loader on [Load More] Button when fetching new data
+      e.target.innerHTML = `Load More`;
+    })
+    .catch(error => console.log('error', error));
+})
