@@ -30,16 +30,14 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     
     featuredSectionEl.innerHTML = `
       <a aria-label="label" href="#">
-        <img src="${featuredResult.image_url}" alt="image" class="featured-card__image">
+        <img src="${featuredResult.image_url}" alt="image" class="featured-card__image" onerror="this.src='assets/images/placeholder.jpg'">
       </a>
       <a aria-label="label" href="#">
         <h3 class="featured-card__title card__title">${featuredResult.title[websiteLang]}</h3>
       </a>
-      <div class="featured-card__details">
-        <p class="featured-card__publisher">${featuredResult.publisher}</p>
-        <p class="featured-card__date">${formatDate(featuredResult.date)}</p>
-      </div>
+      <p class="featured-card__publisher">${featuredResult.publisher}</p>
       <p class="featured-card__description">${featuredResult.content[websiteLang]}</p>
+      <p class="featured-card__date">${formatDate(featuredResult.date)}</p>
     
     `
 
@@ -61,7 +59,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
       latestHTML += `
         <div class="latest__card">
           <a aria-label="label" href="#" class="latest__image-link">
-            <img src="${latestNews.image_url}" alt="image" class="latest__image">
+            <img src="${latestNews.image_url}" alt="image" class="latest__image" onerror="this.src='assets/images/placeholder.jpg'">
           </a>
           
           <div class="latest-card__text">
@@ -96,7 +94,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
       normalHTML += `
       <div class="content__card">
         <a aria-label="label" href="#">
-          <img src="${normalNews.image_url}" alt="image" class="card__image" onerror="this.src='assets/images/placeholder.webp'">
+          <img src="${normalNews.image_url}" alt="image" class="card__image" onerror="this.src='assets/images/placeholder.jpg'">
         </a>
         <a aria-label="label" href="#">
           <h3 class="card__title">${normalNews.title[websiteLang]}</h3>
@@ -161,7 +159,7 @@ loadMoreBtn.addEventListener('click', (e) => {
         newsHTML += `
         <div class="content__card">
           <a aria-label="label" href="#">
-            <img src="${newsContent.image_url}" alt="image" class="card__image" onerror="this.src='assets/images/placeholder.webp'">
+            <img src="${newsContent.image_url}" alt="image" class="card__image" onerror="this.src='assets/images/placeholder.jpg'">
           </a>
           <a aria-label="label" href="#">
             <h3 class="card__title">${newsContent.title[websiteLang]}</h3>
