@@ -29,7 +29,7 @@ fetch(`https://blog.ammarelgendy.online/api/new/${slug}`, requestOptions)
         <p class="news__publisher">${data.publisher}</p>
       </div>
 
-      <img src="${data.image_url}" alt="image" class="news__image">
+      <img src="${data.image_url}" alt="image" class="news__image" onerror="this.src='assets/images/placeholder.jpg'">
 
       <p class="news__body">${data.content[websiteLang]}</p>
     `;
