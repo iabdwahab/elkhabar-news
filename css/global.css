@@ -194,6 +194,7 @@ img {
 }
 .lightbox__close-btn {
   position: absolute;
+  z-index: 200;
   right: -15px;
   top: -15px;
   border: 2px solid var(--third-color);
@@ -202,6 +203,7 @@ img {
   width: 40px;
   font-size: 15px;
   cursor: pointer;
+
 }
 .lightbox__video {
   width: 100%;
