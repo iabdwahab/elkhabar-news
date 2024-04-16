@@ -102,7 +102,7 @@ const lightboxEl = document.querySelector('.lightbox')
 const lightboxVideoEl = document.querySelector('.lightbox__video');
 const lightboxTitleEl = document.querySelector('.lightbox__title');
 
-document.querySelector('.video-thumbnail__image').addEventListener('click', () => {
+document.querySelector('.video-thumbnail').addEventListener('click', () => {
   showVideo('assets/videos/video-1.webm', 'Video');
 });
 document.querySelector('.sidebar-card__title').addEventListener('click', () => {
