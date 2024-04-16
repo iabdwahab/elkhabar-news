@@ -179,7 +179,7 @@ loadMoreBtn.addEventListener('click', (e) => {
       normalNewsContainer.innerHTML += newsHTML;
 
       // Delete Loader on [Load More] Button when fetching new data
-      // e.target.innerHTML = `Load More`;
+      e.target.innerHTML = `Load More`;
     })
     .catch(error => console.log('error', error));
 })
