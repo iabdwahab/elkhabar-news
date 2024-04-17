@@ -85,11 +85,11 @@ sendBtn.addEventListener('click', (e) => {
     myHeaders.append("Accept", "application/json");
     
     var formdata = new FormData();
-    formdata.append("fisrt_name", userFirstName);
-    formdata.append("last_name", userLastName);
-    formdata.append("email", userEmail);
-    formdata.append("phone", userPhoneNumber);
-    formdata.append("message", userMessage);
+    formdata.append("fisrt_name", userFirstName.value);
+    formdata.append("last_name", userLastName.value);
+    formdata.append("email", userEmail.value);
+    formdata.append("phone", userPhoneNumber.value);
+    formdata.append("message", userMessage.value);
     
     var requestOptions = {
       method: 'POST',

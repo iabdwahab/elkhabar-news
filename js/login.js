@@ -79,7 +79,7 @@ loginBtn.addEventListener('click', (e) => {
     
     var formdata = new FormData();
     formdata.append("email", userEmailEl.value);
-    formdata.append("password", userPasswordEl.valuw);
+    formdata.append("password", userPasswordEl.value);
     
     var requestOptions = {
       method: 'POST',

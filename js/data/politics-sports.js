@@ -22,6 +22,30 @@ let normalNewsPageNum = 2;
 fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOptions)
   .then(response => response.json())
   .then(result => {
+    console.log(result)
+    // ############
+    // Start Slider
+    // ############
+    const latestResult = result.data.latest;
+    let latestHTML = [];
+
+    for (let i = 0; i < 3; i++) {
+      const latestNews = latestResult[i];
+
+      document.querySelector(`.slideshow__news-${i}`).innerHTML = `
+        <img src="${latestNews.image_url}" alt="image" class="slideshow__image">
+        <div class="slideshow__text">
+          <p class="slideshow__date">${formatDate(latestNews.date)}</p>
+          <p class="slideshow__publisher">${latestNews.publisher}</p>
+          <h3 class="slideshow__title">${latestNews.title[websiteLang]}</h3>
+          <p class="slideshow__description">${latestNews.content[websiteLang]}</p>
+        </div>
+      `;
+    }
+    // ############
+    // End Slider
+    // ############
+
     // ##############
     // Start Featured
     // ##############
@@ -50,33 +74,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // ############
     // Start Latest
     // ############
-    const latestResult = result.data.latest;
-    let latestHTML = '';
 
-    for (let i = 0; i < 3; i++) {
-      const latestNews = latestResult[i];
-
-      latestHTML += `
-        <div class="latest__card">
-          <a aria-label="label" href="#" class="latest__image-link">
-            <img src="${latestNews.image_url}" alt="image" class="latest__image" onerror="this.src='assets/images/placeholder.jpg'">
-          </a>
-          
-          <div class="latest-card__text">
-            <a aria-label="label" href="#">
-              <h3 class="latest__title card__title">${latestNews.title[websiteLang]}</h3>
-            </a>
-            <div class="latest__details">
-              <p class="latest__publisher">${latestNews.publisher}</p>
-              <p class="latest__date">${formatDate(latestNews.date)}</p>
-            </div>
-            <p class="latest__description">${latestNews.content[websiteLang]}</p>
-          </div>
-        </div>
-      `;
-    }
-
-    latestCardsContainer.innerHTML = latestHTML;
     // ############
     // End Latest
     // ############

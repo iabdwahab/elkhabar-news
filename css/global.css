@@ -28,6 +28,10 @@ aside img {
 img {
   object-fit: cover;
 }
+/* img:hover {
+  transform: fa;
+
+} */
 
 /* ==================== */
 /* Normal Card Template */
@@ -161,7 +165,7 @@ img {
 
 /* Start Lightbox */
 .lightbox {
-  background-color: var(--fourth-color);
+  background-color: hsla(0, 0%, 0%, 0.5);
   position: fixed;
   top: 0;
   left: 0;

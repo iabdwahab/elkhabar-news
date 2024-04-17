@@ -91,19 +91,19 @@ signupBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
   if (formValidation()) {
-    const userFirstName = document.querySelector('#first-name-el').value;
-    const userLastName = document.querySelector('#last-name-el').value;
-    const userEmail = document.querySelector('#email-el').value;
-    const userPassword = document.querySelector('#password-el').value;
+    const userFirstName = document.querySelector('#first-name-el');
+    const userLastName = document.querySelector('#last-name-el');
+    const userEmail = document.querySelector('#email-el');
+    const userPassword = document.querySelector('#password-el');
   
     var myHeaders = new Headers();
     myHeaders.append("Accept", "application/json");
   
     var formdata = new FormData();
-    formdata.append("first_name", userFirstName);
-    formdata.append("last_name", userLastName);
-    formdata.append("email", userEmail);
-    formdata.append("password", userPassword);
+    formdata.append("first_name", userFirstName.value);
+    formdata.append("last_name", userLastName.value);
+    formdata.append("email", userEmail.value);
+    formdata.append("password", userPassword.value);
   
     var requestOptions = {
       method: 'POST',
