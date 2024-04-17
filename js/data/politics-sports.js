@@ -27,7 +27,6 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // Start Slider
     // ############
     const latestResult = result.data.latest;
-    let latestHTML = [];
 
     for (let i = 0; i < 3; i++) {
       const latestNews = latestResult[i];
@@ -68,16 +67,6 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // ##############
     // End Featured
     // ##############
-
-
-
-    // ############
-    // Start Latest
-    // ############
-
-    // ############
-    // End Latest
-    // ############
 
 
     // #########
