@@ -28,13 +28,13 @@ function formValidation() {
       enter_valid_email: "أدخل بريدًا إلكترونيًا صحيحًا.",
       characters_3: "على الأقل 3 أحرف.",
       characters_11: "على الأقل 11 رقم",
-      characters_40: "على الأقل 40 حرفًا."
+      empty: "يجب ملء هذا الحقل."
     },
     en: {
       enter_valid_email: "Enter a valid Email.",
       characters_3: "Must be at least 3 characters.",
       characters_11: "Must be at least 11 number.",
-      characters_40: "Must be at least 40 characters."
+      empty: "Can't be empty."
     }
   }
 
@@ -42,7 +42,8 @@ function formValidation() {
   const validLastName = userFirstName.value.length >= 3;
   const validEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userEmail.value);
   const validPhoneNumber = userPhoneNumber.value.length >= 11;
-  const validMessage = userMessage.value.length >= 40;
+  const validMessage = userMessage.value.length > 0;
+
 
   if (!validFirstName) {
     document.querySelector(`.first_name-error-msg`).innerHTML = errorsTranslations[websiteLanguage].characters_3;
@@ -65,20 +66,45 @@ function formValidation() {
     userPhoneNumber.classList.add('input-field--error');
   }
   if (!validMessage) {
-    document.querySelector(`.message-error-msg`).innerHTML = errorsTranslations[websiteLanguage].characters_40;
+    document.querySelector(`.message-error-msg`).innerHTML = errorsTranslations[websiteLanguage].empty;
     document.querySelector(`.message-error-msg`).classList.add('error-msg--visible')
     userMessage.classList.add('input-field--error');
   }
 
 
-  return validFirstName && validLastName && validEmail;
+  return validFirstName && validLastName && validEmail && validPhoneNumber && validMessage;
 }
 
 const sendBtn = document.querySelector('#submit-btn');
 
-
-sendBtn.addEventListener('click', e => {
+sendBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
-  formValidation();
-})
+  if (formValidation()) {
+    var myHeaders = new Headers();
+    myHeaders.append("Accept", "application/json");
+    
+    var formdata = new FormData();
+    formdata.append("fisrt_name", userFirstName);
+    formdata.append("last_name", userLastName);
+    formdata.append("email", userEmail);
+    formdata.append("phone", userPhoneNumber);
+    formdata.append("message", userMessage);
+    
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: formdata,
+      redirect: 'follow'
+    };
+    
+    fetch("https://blog.ammarelgendy.online/api/contact-us", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+
+      })
+      .catch(error => console.log('error', error));
+
+  }
+});

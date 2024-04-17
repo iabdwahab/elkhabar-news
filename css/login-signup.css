@@ -85,6 +85,20 @@ html[dir="rtl"] .hide-password-btn {
 }
 
 
+.log-error {
+  color: var(--main-color);
+  text-align: left;
+  font-size: 15px;
+  visibility: hidden;
+  margin-top: -4px;
+}
+html[dir="rtl"] .log-error {
+  text-align: right;
+}
+.log-error--visible {
+  visibility: visible;
+}
+
 .log-btn {
   padding: 10px;
   background-color: var(--main-color);
@@ -92,7 +106,7 @@ html[dir="rtl"] .hide-password-btn {
   font-weight: 800;
   border: none;
   border-radius: 4px;
-  margin-top: 40px;
+  margin-top: 10px;
   cursor: pointer;
   font-size: 16px;
 }

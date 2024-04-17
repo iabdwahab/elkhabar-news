@@ -28,7 +28,9 @@ const loginBtn = document.querySelector('.log-btn');
 inputFields.forEach(inputField => {
 
   inputField.addEventListener('input', () => {
-    document.querySelector(`.${inputField.name}-error-msg`).classList.remove('error-msg--visible')
+    document.querySelector(`.${inputField.name}-error-msg`).classList.remove('error-msg--visible');
+    inputField.classList.remove('input-field--error');
+    document.querySelector('.log-error').classList.remove('log-error--visible');
   });
 
 });
@@ -69,15 +71,15 @@ loginBtn.addEventListener('click', (e) => {
   e.preventDefault();
 
     if (formValidation()) {
-    const userEmail = document.querySelector('#email-el').value;
-    const userPassword = document.querySelector('#password-el').value;
+    const userEmailEl = document.querySelector('#email-el');
+    const userPasswordEl = document.querySelector('#password-el');
   
     var myHeaders = new Headers();
     myHeaders.append("Accept", "application/json");
     
     var formdata = new FormData();
-    formdata.append("email", userEmail);
-    formdata.append("password", userPassword);
+    formdata.append("email", userEmailEl.value);
+    formdata.append("password", userPasswordEl.valuw);
     
     var requestOptions = {
       method: 'POST',
@@ -89,6 +91,7 @@ loginBtn.addEventListener('click', (e) => {
     fetch("https://blog.ammarelgendy.online/api/login", requestOptions)
       .then(response => response.json())
       .then(result => {
+        console.log(result);
 
         if (result.success) {
           localStorage.setItem('userInfo', JSON.stringify(result.data));
@@ -102,6 +105,13 @@ loginBtn.addEventListener('click', (e) => {
 
           // When signin success; browser will be in index.html
           window.location.href = ('./index.html');
+
+        } else {
+
+          document.querySelector('.log-error').classList.add('log-error--visible');
+          userEmailEl.classList.add('input-field--error');
+          userPasswordEl.classList.add('input-field--error');
+
         }
         
       })

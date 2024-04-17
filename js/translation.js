@@ -52,7 +52,8 @@ const translations = {
     signup_title: "الخبر نيوز - إنشاء حساب",
     politics_title: "الخبر نيوز - السياسة",
     sports_title: "الخبر نيوز - الرياضة",
-    technology_title: "الخبر نيوز - التكنولوجيا"
+    technology_title: "الخبر نيوز - التكنولوجيا",
+    email_password_incorrect: "خطأ في البريد الإلكتروني أو كلمة السر."
   },
   en: {
     contact: "Contact",
@@ -107,7 +108,8 @@ const translations = {
     politics_title: "El-khabar News - Politics",
     signup_title: "El-khabar News - Signup",
     sports_title: "El-khabar News - Sports",
-    technology_title: "El-khabar News - Technology"
+    technology_title: "El-khabar News - Technology",
+    email_password_incorrect: "Email or Password is incorrect."
   }
 }
 

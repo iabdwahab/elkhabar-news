@@ -2,7 +2,7 @@
 
 /* Start hero-section */
 .hero-section {
-  height: calc(100vh - (120px));
+  height: 50vh;
   position: relative;
   z-index: 1;
   display: flex;
@@ -10,7 +10,7 @@
   justify-content: center;
   padding-left: 40px;
   padding-right: 40px;
-  padding-top: 100px;
+  margin-bottom: 20px;
 }
 .hero-section__bg-img {
   width: 100%;
@@ -37,10 +37,10 @@
 .hero-section__title {
   color: #444343;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 40px;
 }
 .hero-section__description {
-  font-size: 20px;
+  font-size: 16px;
   width: 40%;
 }
 .technology-hero-section .hero-section__title,
@@ -194,7 +194,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 }
 .sidebar__card {
   display: grid;
-  grid-template-columns: 0.6fr 1fr;
+  grid-template-columns: 0.5fr 1fr;
   gap: 10px;
 } 
 .video-thumbnail__image {

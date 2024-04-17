@@ -127,8 +127,10 @@ signupBtn.addEventListener('click', (e) => {
 
             erorredEl.innerHTML = errorText;
             erorredEl.classList.add('error-msg--visible');
-          })
-  
+          });
+
+        } else {
+          window.location.href = ('./login.html');  
         }
   
       });

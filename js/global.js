@@ -96,33 +96,3 @@ function formatDate(date) {
 
   return `${Number(day)}${dayPostfix} ${monthsName[monthNumber]} ${year}`;
 }
-
-// Videos Functions
-const lightboxEl = document.querySelector('.lightbox')
-const lightboxVideoEl = document.querySelector('.lightbox__video');
-const lightboxTitleEl = document.querySelector('.lightbox__title');
-
-document.querySelector('.video-thumbnail').addEventListener('click', () => {
-  showVideo('assets/videos/video-1.webm', 'Video');
-});
-document.querySelector('.sidebar-card__title').addEventListener('click', () => {
-  showVideo('assets/videos/video-1.webm', 'Video');
-});
-
-function showVideo(videoSrc, videoTitle) {
-
-  lightboxVideoEl.src = videoSrc;
-  lightboxTitleEl.innerHTML = videoTitle;
-
-  lightboxEl.classList.add('lightbox--active');
-
-
-}
-
-const videCloseBtn = document.querySelector('.lightbox__close-btn');
-
-videCloseBtn.addEventListener('click', hideVideo)
-
-function hideVideo() {
-  lightboxEl.classList.remove('lightbox--active');
-}

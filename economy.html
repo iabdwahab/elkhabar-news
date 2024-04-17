@@ -13,6 +13,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <div class="lightbox">
+    <div class="lightbox__container">
+
+      <div class="lightbox__video-container">
+        <button class="lightbox__close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <video src="assets/videos/video-1.webm" controls class="lightbox__video"></video>
+        <p class="lightbox__title"></p>
+      </div>
+
+    </div>
+  </div>
+
   <h1 style="display: none;">El-khabar news</h1>
   <header class="header">
     <ul class="social-links">
@@ -74,34 +88,8 @@
       activities that ultimately determine the allocation of resources within a group.
     </p>
   </main>
+  
 
-  <section class="features-section">
-    <div class="container features-section__container">
-      <div class="features__feature">
-        <img src="assets/images/economy/features-1.png" alt="feature img" class="feature__img">
-        <div class="feature__text">
-          <h4 class="feature__title">The Us In Brief</h4>
-          <p class="feature__description">our daily political update</p>
-        </div>
-      </div> <!-- ./features-feature -->
-      
-      <div class="features__feature">
-        <img src="assets/images/economy/features-2.png" alt="feature img" class="feature__img">
-        <div class="feature__text">
-          <h4 class="feature__title">the intelligence</h4>
-          <p class="feature__description">today: why is nikki haley <br> fighting on?</p>
-        </div>
-      </div> <!-- ./features-feature -->
-
-      <div class="features__feature">
-        <img src="assets/images/economy/features-1.png" alt="feature img" class="feature__img">
-        <div class="feature__text">
-          <h4 class="feature__title">The Us In Brief</h4>
-          <p class="feature__description">introducing our new weekly <br> newsletter on latin america</p>
-        </div>
-      </div> <!-- ./features-feature -->
-    </div> <!-- ./container -->
-  </section>
 
   <div class="ads-container">
     <div class="container">
@@ -168,106 +156,62 @@
 
       </div>
 
-      <aside class="content__sidebar">
-        <div class="sidebar__news-card">
-          <a href="#">
-            <img src="assets/images/economy/news-3.jpg" alt="image" class="news-card__img">
-          </a>
-          <div class="news-card__text">
+      <aside class="sidebar">
+        <h2 class="sidebar__heading" data-translate-name="videos">Videos</h2>
+        <div class="sidebar__cards">
 
-            <div class="news-card__info">
-              <p class="news-card__location">Europe</p>
-              <span class="news-card__slash"></span>
-              <p class="news-card__heading">Within Range</p>
+          <div class="sidebar__card">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
+              <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
             </div>
-            <a href="#">
-              <p class="news-card__title card__title">Khariv is Striggling Under Russian Rocket Attack</p>
-            </a>
 
-          </div>
-        </div> <!-- ./content__news-card -->
-
-        <div class="sidebar__news-card sidebar-text-news">
-          <div class="news-card__text">
-            <div class="news-card__info">
-              <p class="news-card__location">Leaders</p>
-              <span class="news-card__slash"></span>
-              <p class="news-card__heading">No Longer Unthinkable</p>
+            <div class="sidebar-card__details">
+                <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
+              <p class="sidebar-card__date">May 30, 2024</p>
             </div>
-            <a href="#">
-              <p class="news-card__title card__title">The Perils Of A Le Pen Presidency</p>
-            </a>
-            <p class="news-card__description">
-              Any complacency about the prospect of a President Le Pen would be wrong
-            </p>
-          </div>
-        </div> <!-- ./content__news-card -->
+          </div> <!-- ./sidebar-card -->
 
-        <div class="sidebar-videos">
-          <h2 class="sidebar__heading" data-translate-name="videos">Videos</h2>
-          <div class="sidebar__cards">
-  
-            <div class="sidebar__card">
-              <a aria-label="label" href="#" class="video-thumbnail">
-                <img src="assets/images/economy/news-3.jpg" alt="image" class="video-thumbnail__image">
-                <p class="video-thumbnail__time">12:24</p>
-              </a>
-  
-              <div class="sidebar-card__details">
-                <a aria-label="label" href="#">
-                  <h3 class="sidebar-card__title card__title">Gucci, Prada and Tiffany’s bet big on property</h3>
-                </a>
-                <p class="sidebar-card__date">May 30, 2024</p>
-              </div>
-            </div> <!-- ./sidebar-card -->
-  
-            <div class="sidebar__card">
-              <a aria-label="label" href="#" class="video-thumbnail">
-                <img src="assets/images/economy/news-3.jpg" alt="image" class="video-thumbnail__image">
-                <p class="video-thumbnail__time">12:24</p>
-              </a>
-  
-              <div class="sidebar-card__details">
-                <a aria-label="label" href="#">
-                  <h3 class="sidebar-card__title card__title">Gucci, Prada and Tiffany’s bet big on property</h3>
-                </a>
-                <p class="sidebar-card__date">May 30, 2024</p>
-              </div>
-            </div> <!-- ./sidebar-card -->
-  
-            <div class="sidebar__card">
-              <a aria-label="label" href="#" class="video-thumbnail">
-                <img src="assets/images/economy/news-3.jpg" alt="image" class="video-thumbnail__image">
-                <p class="video-thumbnail__time">12:24</p>
-              </a>
-  
-              <div class="sidebar-card__details">
-                <a aria-label="label" href="#">
-                  <h3 class="sidebar-card__title card__title">Gucci, Prada and Tiffany’s bet big on property</h3>
-                </a>
-                <p class="sidebar-card__date">May 30, 2024</p>
-              </div>
-            </div> <!-- ./sidebar-card -->
-  
-            <div class="sidebar__card">
-              <a aria-label="label" href="#" class="video-thumbnail">
-                <img src="assets/images/economy/news-3.jpg" alt="image" class="video-thumbnail__image">
-                <p class="video-thumbnail__time">12:24</p>
-              </a>
-  
-              <div class="sidebar-card__details">
-                <a aria-label="label" href="#">
-                  <h3 class="sidebar-card__title card__title">Gucci, Prada and Tiffany’s bet big on property</h3>
-                </a>
-                <p class="sidebar-card__date">May 30, 2024</p>
-              </div>
-            </div> <!-- ./sidebar-card -->
-  
-          </div> <!-- ./sidebar__cards -->
-        </div>
+          <div class="sidebar__card">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
+              <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
+            </div>
 
-        <div class="ads-container sidebar-ads">
-          <h4 class="ads__title" data-translate-name="ad">Ad</h4>
+            <div class="sidebar-card__details">
+                <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
+              <p class="sidebar-card__date">May 30, 2024</p>
+            </div>
+          </div> <!-- ./sidebar-card -->
+
+          <div class="sidebar__card">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
+              <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
+            </div>
+
+            <div class="sidebar-card__details">
+                <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
+              <p class="sidebar-card__date">May 30, 2024</p>
+            </div>
+          </div> <!-- ./sidebar-card -->
+
+          <div class="sidebar__card">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
+              <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
+            </div>
+
+            <div class="sidebar-card__details">
+                <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
+              <p class="sidebar-card__date">May 30, 2024</p>
+            </div>
+          </div> <!-- ./sidebar-card -->
+
+        </div> <!-- ./sidebar__cards -->
+
+        <div class="ads-container">
+          <h4 class="ads__title"data-translate-name="ad">Ad</h4>
           <img src="assets/images/google-ads.png" alt="img" class="ads__image">
         </div>
       </aside>
@@ -369,6 +313,7 @@
 
 
   <script src="js/global.js"></script>
+  <script src="js/lightboxVideos.js"></script>
   <script src="js/translation.js"></script>
 </body>
 </html>

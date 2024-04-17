@@ -16,6 +16,21 @@
   <div class="loader-container">
     <div class="loader"></div>
   </div>
+
+  <div class="lightbox">
+    <div class="lightbox__container">
+
+      <div class="lightbox__video-container">
+        <button class="lightbox__close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <video src="assets/videos/video-1.webm" controls class="lightbox__video"></video>
+        <p class="lightbox__title"></p>
+      </div>
+
+    </div>
+  </div>
+
   
   <h1 style="display: none;">El-khabar news</h1>
   <header class="header">
@@ -157,66 +172,57 @@
         <div class="sidebar__cards">
 
           <div class="sidebar__card">
-            <a aria-label="label" href="#" class="video-thumbnail">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
               <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
-              <p class="video-thumbnail__time">12:24</p>
-            </a>
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
+            </div>
 
             <div class="sidebar-card__details">
-              <a aria-label="label" href="#">
                 <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
-              </a>
               <p class="sidebar-card__date">May 30, 2024</p>
             </div>
           </div> <!-- ./sidebar-card -->
 
           <div class="sidebar__card">
-            <a aria-label="label" href="#" class="video-thumbnail">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
               <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
-              <p class="video-thumbnail__time">12:24</p>
-            </a>
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
+            </div>
 
             <div class="sidebar-card__details">
-              <a aria-label="label" href="#">
                 <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
-              </a>
               <p class="sidebar-card__date">May 30, 2024</p>
             </div>
           </div> <!-- ./sidebar-card -->
 
           <div class="sidebar__card">
-            <a aria-label="label" href="#" class="video-thumbnail">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
               <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
-              <p class="video-thumbnail__time">12:24</p>
-            </a>
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
+            </div>
 
             <div class="sidebar-card__details">
-              <a aria-label="label" href="#">
                 <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
-              </a>
               <p class="sidebar-card__date">May 30, 2024</p>
             </div>
           </div> <!-- ./sidebar-card -->
 
           <div class="sidebar__card">
-            <a aria-label="label" href="#" class="video-thumbnail">
+            <div class="video-thumbnail" data-video-url="assets/videos/video-1.webm">
               <img src="assets/images/hero-news-3.png" alt="image" class="video-thumbnail__image">
-              <p class="video-thumbnail__time">12:24</p>
-            </a>
+              <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
+            </div>
 
             <div class="sidebar-card__details">
-              <a aria-label="label" href="#">
                 <h3 class="sidebar-card__title card__title">Estonia Says It Thwarted "Shadow War" Operation By Russia</h3>
-              </a>
               <p class="sidebar-card__date">May 30, 2024</p>
             </div>
           </div> <!-- ./sidebar-card -->
-
 
         </div> <!-- ./sidebar__cards -->
 
         <div class="ads-container">
-          <h4 class="ads__title" data-translate-name="ad"></h4>
+          <h4 class="ads__title"data-translate-name="ad">Ad</h4>
           <img src="assets/images/google-ads.png" alt="img" class="ads__image">
         </div>
       </aside>
@@ -283,6 +289,7 @@
 
   <script src="js/global.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/lightboxVideos.js"></script>
   <script src="js/translation.js"></script>
   <script src="js/data/politics-sports.js"></script>
 </body>
