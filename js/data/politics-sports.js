@@ -73,12 +73,12 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // Start content Cards
     // #########
     const normalResult = result.data.normal;
-    let normalHTML = '';
+    let normalNewsHTML = '';
 
     for (let i = 0; i < normalResult.length; i++) {
       const normalNews = normalResult[i];
 
-      normalHTML += `
+      normalNewsHTML += `
       <div class="content__card">
         <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${normalNews.slug}')">
           <img src="${normalNews.image_url}" alt="image" class="card__image news-image" onerror="this.src='assets/images/placeholder.jpg'">
@@ -95,7 +95,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
       `;
     }
 
-    normalNewsContainer.innerHTML = normalHTML;
+    normalNewsContainer.innerHTML = normalNewsHTML;
     // #########
     // End content Cards
     // #########
@@ -137,25 +137,25 @@ loadMoreBtn.addEventListener('click', (e) => {
         loadMoreBtn.remove();
       }
 
-      const news = result.data.data;
+      const loadedNews = result.data.data;
 
       let newsHTML = '';
 
-      news.forEach((newsContent) => {
+      loadedNews.forEach((loadedNewsContent) => {
 
         newsHTML += `
         <div class="content__card">
-          <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${newsContent.slug}')">
-            <img src="${newsContent.image_url}" alt="image" class="card__image news-image" onerror="this.src='assets/images/placeholder.jpg'">
+          <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${loadedNewsContent.slug}')">
+            <img src="${loadedNewsContent.image_url}" alt="image" class="card__image news-image" onerror="this.src='assets/images/placeholder.jpg'">
           </a>
-          <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${newsContent.slug}')">
-            <h3 class="card__title">${newsContent.title[websiteLang]}</h3>
+          <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${loadedNewsContent.slug}')">
+            <h3 class="card__title">${loadedNewsContent.title[websiteLang]}</h3>
           </a>
           <div class="card__info">
-            <p class="card__publisher">${newsContent.publisher}</p>
-            <p class="card__date">${formatDate(newsContent.date)}</p>
+            <p class="card__publisher">${loadedNewsContent.publisher}</p>
+            <p class="card__date">${formatDate(loadedNewsContent.date)}</p>
           </div>
-          <p class="card__description">${newsContent.content[websiteLang]}</p>
+          <p class="card__description">${loadedNewsContent.content[websiteLang]}</p>
         </div>
         `
         

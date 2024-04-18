@@ -140,42 +140,16 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.content__news-card {
-  margin-bottom: 20px;
+.content__news {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.news-card__img {
+.card__image {
   width: 100%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
 }
-.news-card__info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-  margin-bottom: 4px;
-  font-weight: 600;
-}
-.news-card__location {
-  color: #D91F26;
-}
-.news-card__slash {
-  width: 2px;
-  height: 20px;
-  background-color: #000000;
-}
-.news-card__heading {
-  color: #666666;
-}
-
-.news-card__title {
-  font-weight: 700;
-}
-.news-card__description {
-  color: #444343;
-  font-size: 16px;
-}
-
 
 
 .sidebar-text-news {
@@ -221,16 +195,16 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 /* End .content */
 
 
-/* Start Featured */
-.featured-section {
+/* Start special */
+.special-section {
   margin-bottom: 20px;
 }
-.featured-section__container {
+.special-section__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.featured__card {
+.special__card {
   position: relative;
   display: flex;
   align-items: end;
@@ -238,7 +212,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   height: 300px;
   padding: 20px;
 }
-.featured-card__image {
+.special-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -248,38 +222,32 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   left: 0;
 }
 
-.featured-card__date {
+.special-card__date {
   color: var(--main-color);
   font-weight: 600;
 }
-.featured-card__publisher {
+.special-card__publisher {
   color: var(--fourth-color);
   font-weight: 600;
 }
-.featured-card__publisher {
+.special-card__publisher {
   color: var(--fourth-color);
   font-weight: 600;
 }
 
-.featured-card-1 {
+.special-card-top {
   grid-area: 1 / 1 / 2 / 3;
 }
-.featured-card-1 .featured-card__text {
+.special-card-top .special-card__text {
   width: 80%;
-}
-.featured-card-2 {
-  grid-area: 2 / 1 / 3 / 2;
-}
-.featured-card-3 {
-  grid-area: 2 / 2 / 3 / 3;
 }
 
 @media (max-width: 768px) {
-  .featured-section__container {
+  .special-section__container {
     grid-template-columns: 1fr;
   }
-  .featured__card {
+  .special__card {
     grid-area: unset;
   }
 }
-/* End Featured */
+/* End special */
