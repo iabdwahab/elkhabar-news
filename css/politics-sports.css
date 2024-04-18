@@ -120,9 +120,6 @@
   grid-template-columns: 1fr 400px;
   gap: 20px;
 }
-.card__image {
-  height: 280px;
-}
 
 .section-news__container {
   display: grid;

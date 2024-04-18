@@ -207,7 +207,7 @@ ul {
   padding-right: 20px;
 }
 .lightbox__video-container {
-  width: 800px;
+  min-width: 80px;
   max-width: 100%;
   position: relative;
 }
@@ -583,6 +583,10 @@ html[dir="rtl"] .sub-header__link--active::after {
     gap: 20px;
     margin-top: 30px;
   }
+  .featured__image {
+    height: 200px;
+  }
+  
 }
 /* End top-news */
 
@@ -616,6 +620,11 @@ html[dir="rtl"] .sub-header__link--active::after {
 .featured-video__info {
   color: var(--fourth-color);
   margin-top: 6px;
+}
+@media (max-width: 970px) {
+  .featured-video__video {
+    height: 200px;
+  }
 }
 /* End Featured Video */
 
