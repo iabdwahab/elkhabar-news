@@ -82,6 +82,8 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=2`
     // End Special News
     // ##################
 
+    // Hide Loader from Page
+    document.querySelector('.loader-container').style.display = 'none';
   })
   .catch(error => console.log('error', error));
 
