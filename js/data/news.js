@@ -1,6 +1,6 @@
 const slug = localStorage.getItem('slug');
 const newsContainer = document.querySelector('.news .container');
-const websiteLang = localStorage.getItem('lang');
+const websiteLang = localStorage.getItem('lang') || 'en';
 
 var myHeaders = new Headers();
 myHeaders.append("Accept", "application/json");
