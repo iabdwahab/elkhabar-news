@@ -759,6 +759,9 @@ html[dir="rtl"] .sub-header__link--active::after {
     gap: 20px;
     text-align: center;
   }
+  .footer__logo {
+    padding-left: 0;
+  }
 }
 /* End Footer */
 
