@@ -18,7 +18,7 @@ const translations = {
     find_us_in_social_media: "تابعنا على صفحات التواصل الاجتماعي",
     community: "المجتمع",
     ad: "إعلان",
-    featured_news: "خبر مميز",
+    featured_news: "أهم الأخبار",
     latest_news: "آخر الأخبار",
     load_more: "تحميل المزيد",
     password_6_characters: "كلمة السر يجب أن تتكون من 6 أحرف على الأقل.",
@@ -53,7 +53,12 @@ const translations = {
     politics_title: "الخبر نيوز - السياسة",
     sports_title: "الخبر نيوز - الرياضة",
     technology_title: "الخبر نيوز - التكنولوجيا",
-    email_password_incorrect: "خطأ في البريد الإلكتروني أو كلمة السر."
+    email_password_incorrect: "خطأ في البريد الإلكتروني أو كلمة السر.",
+    featured_video: "أهم الفيديوهات",
+    economy_hero_title: "مبادرة <br> الاقتصاد",
+    economy_hero_description: "هو نظام من أنشطة الإنتاج والاستهلاك المترابطة التي تحدد في نهاية المطاف تخصيص الموارد داخل المجموعة.",
+    technology_hero_title: "الاصطناعي <br> الذكاء",
+    technology_hero_description: "تغطية إخبارية حول الذكاء الاصطناعي وتكنولوجيا التعلم الآلي، والشركات التي تبنيها، والقضايا الأخلاقية التي يثيرها الذكاء الاصطناعي اليوم. ويشمل ذلك الذكاء الاصطناعي التوليدي، بما في ذلك نماذج اللغات الكبيرة، ونماذج تحويل النص إلى صورة، ونماذج تحويل النص إلى فيديو؛ التعرف على الكلام وتوليده؛ والتحليلات التنبؤية.",
   },
   en: {
     contact: "Contact",
@@ -109,7 +114,13 @@ const translations = {
     signup_title: "El-khabar News - Signup",
     sports_title: "El-khabar News - Sports",
     technology_title: "El-khabar News - Technology",
-    email_password_incorrect: "Email or Password is incorrect."
+    email_password_incorrect: "Email or Password is incorrect.",
+    featured_video: "Featured Video",
+    economy_hero_title: "ECONOMY <br> INITIATIVE",
+    economy_hero_description: "is a system of inter-related production and consumption activities that ultimately determine the allocation of resources within a group.",
+    technology_hero_title: "Artificial <br> intelligence",
+    technology_hero_description: "News coverage on artificial intelligence and machine learning tech, the companies building them, and the ethical issues AI raises today. This encompasses generative AI, including large language models, text-to-image and text-to-video models; speech recognition and generation; and predictive analytics.",
+
   }
 }
 

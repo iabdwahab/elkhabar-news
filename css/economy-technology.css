@@ -153,14 +153,6 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 
 
 /* Sidebar */
-
-.featured-video__section {
-  margin-bottom: 20px;
-}
-.featured-video__video {
-  height: 300px;
-}
-
 .sidebar-videos {
   margin-top: 40px;
 }

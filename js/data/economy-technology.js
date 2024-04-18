@@ -16,6 +16,43 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=2`
   .then(response => response.json())
   .then(result => {
     console.log(result)
+
+
+
+    // ####################
+    // Start Featured Image
+    // ####################
+    const featuredResult = result.data.featured;
+    
+    document.querySelector('.featured__section').innerHTML += `
+      <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${featuredResult.slug}')">
+        <img src="${featuredResult.image_url}" alt="image" class="featured__image news-image" onerror="this.src='assets/images/placeholder.jpg'">
+      </a>
+      <a aria-label="label" href="news.html" onclick="localStorage.setItem('slug', '${featuredResult.slug}')">
+        <h3 class="featured__title card__title">${featuredResult.title[websiteLang]}</h3>
+      </a>
+      <p class="featured__publisher">${featuredResult.publisher}</p>
+      <p class="featured__description">${featuredResult.content[websiteLang]}</p>
+      <p class="featured__date">${formatDate(featuredResult.date)}</p>
+    `
+    // ####################
+    // End Featured Image
+    // ####################
+
+
+    // ####################
+    // Start Featured Video
+    // ####################
+
+
+
+    // ####################
+    // End Featured Video
+    // ####################
+
+
+
+    
     // #################
     // Start Normal News
     // #################

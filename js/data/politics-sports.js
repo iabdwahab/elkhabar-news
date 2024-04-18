@@ -51,7 +51,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
 
     const featuredResult = result.data.featured;
     
-    featuredSectionEl.innerHTML = `
+    featuredSectionEl.innerHTML += `
       <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${featuredResult.slug}')">
         <img src="${featuredResult.image_url}" alt="image" class="featured__image news-image" onerror="this.src='assets/images/placeholder.jpg'">
       </a>
