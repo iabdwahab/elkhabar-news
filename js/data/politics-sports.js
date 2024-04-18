@@ -131,7 +131,7 @@ loadMoreBtn.addEventListener('click', (e) => {
     .then(response => response.json())
     .then(result => {
 
-      console.log(result);
+      console.log('loaded: ',result);
       // Remove LoadMoreBtn when no data found
       if (loadMorePageNumber >= result.data.last_page) {
         loadMoreBtn.remove();
@@ -160,8 +160,6 @@ loadMoreBtn.addEventListener('click', (e) => {
         `
         
       });
-
-      console.log(news)
 
       normalNewsContainer.innerHTML += newsHTML;
 
