@@ -129,33 +129,33 @@
 
 /* Start featured-card News */
 
-.featured-card__title {
+.featured__title {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: var(--featured-title-font-size);
 }
 
-.featured-card__details {
+.featured__details {
   display: flex;
   justify-content: space-between;
   color: var(--fourth-color);
   margin-top: 4px;
   margin-bottom: 4px;
 }
-.featured-card__publisher,
-.featured-card__date {
+.featured__publisher,
+.featured__date {
   font-size: 16px;
   color: var(--fourth-color);
 }
-.featured-card__publisher {
+.featured__publisher {
   margin-bottom: 4px;
 }
-.featured-card__date {
+.featured__date {
   margin-top: 4px;
   font-size: 14px;
 }
 
-.featured-card__description {
+.featured__description {
   /* Adding [...] at the end of the text; when text over 2 lines */
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -163,57 +163,10 @@
   overflow: hidden;
   font-size: var(--featured-description-font-size);
 }
-/* End featured-card News */
 
-/* Start Latest News */
-.latest__cards {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.latest__card {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-.latest__image {
+.featured__image {
   width: 100%;
-  max-height: 135px;
-}
-.latest-card__text {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-top: 10px;
-}
-.latest__title {
-  /* Adding [...] at the end of the text; when text over 2 lines */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  font-size: 18px;
-}
-.latest__details {
-  display: flex;
-  justify-content: space-between;
-  color: var(--fourth-color);
-}
-.latest__description {
-  font-size: var(--news-description-fs);
-  /* Adding [...] at the end of the text; when text over 2 lines */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.featured-card__image {
-  width: 100%;
-  width: 100%;
-  min-height: 400px;
-  max-height: 430px;
+  height: 400px;
 }
 
 @media (max-width: 970px) {
@@ -223,17 +176,7 @@
     gap: 20px;
     margin-top: 30px;
   }
-
-  .latest__card {
-    flex-direction: column;
-  }
-  .latest__image-link,
-  .latest__image,
-  .latest-card__text {
-    width: 100%;
-  }
 }
-/* End Latest News */
 /* End top-news */
 
 /* Start .content */

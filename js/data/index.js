@@ -21,7 +21,7 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
     mainNewsList.forEach((mainNews, index) => {
       mainNewsHTML += `
         <a aria-label="label" href="news.html" class="hero-news hero-news-${index}" onclick="localStorage.setItem('slug', '${mainNews.slug}')">
-          <img src="${mainNews.image_url}" alt="image" class="hero-news__image" onerror="this.src='assets/images/placeholder.jpg'">
+          <img src="${mainNews.image_url}" alt="image" class="hero-news__image" onerror="this.src='assets/images/placeholder.jpg'">          
           <p class="hero-news__type">${mainNews.category.name}</p>
           <p class="hero-news__date">${formatDate(mainNews.date)}</p>
           <p class="hero-news__publisher">${mainNews.publisher}</p>
@@ -46,8 +46,8 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
         conentCardsHTML += `
         <div class="content__card">
 
-          <a aria-label="label" href="news.html" onclick="localStorage.setItem('slug', '${sectionNews.slug}')">
-            <img src="${sectionNews.image_url}" alt="image" class="card__image" onerror="this.src='assets/images/placeholder.jpg'">
+          <a aria-label="label" href="news.html" class="news-image-container" onclick="localStorage.setItem('slug', '${sectionNews.slug}')">
+            <img src="${sectionNews.image_url}" alt="image" class="card__image news-image" onerror="this.src='assets/images/placeholder.jpg'">
           </a>
 
           <a aria-label="label" href="news.html" onclick="localStorage.setItem('slug', '${sectionNews.slug}')">

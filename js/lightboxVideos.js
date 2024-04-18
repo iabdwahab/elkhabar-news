@@ -21,6 +21,10 @@ function showVideo(videoSrc, videoTitle) {
 }
 
 document.querySelector('.lightbox__close-btn').addEventListener('click', hideLightbox);
+document.querySelector('.lightbox__overlay').addEventListener('click', () => {
+  hideLightbox();
+})
+
 
 function hideLightbox() {
   lightboxEl.classList.remove('lightbox--active');
