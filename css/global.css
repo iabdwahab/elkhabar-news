@@ -181,10 +181,13 @@ ul {
   height: 100%;
   z-index: 100;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   display: none;
 }
 .lightbox--active {
-  display: block;
+  display: flex;
 }
 .lightbox__overlay {
   background-color: hsla(0, 0%, 0%, 0.5);
@@ -195,10 +198,6 @@ ul {
   height: 100%;
 }
 .lightbox__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   max-width: 800px;
   flex-direction: column;
   position: relative;
