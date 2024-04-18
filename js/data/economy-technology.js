@@ -15,6 +15,7 @@ var requestOptions = {
 fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=2`, requestOptions)
   .then(response => response.json())
   .then(result => {
+    console.log(result)
     // #################
     // Start Normal News
     // #################
