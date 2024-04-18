@@ -152,10 +152,12 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 }
 
 
-.sidebar-text-news {
-  margin-top: 20px;
+/* Sidebar */
+
+.featured-video__section {
+  margin-bottom: 20px;
 }
-.sidebar__news-card .news-card__img {
+.featured-video__video {
   height: 300px;
 }
 

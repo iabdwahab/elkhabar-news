@@ -63,7 +63,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=2`
       
       specialNewsHTML += `
         <a href="news.html" class="special__card" onclick="localStorage.setItem('slug', '${specialNews.slug}')">
-          <img src="${specialNews.image_url}" alt="image" class="special-card__image">
+          <img src="${specialNews.image_url}" alt="image" class="special-card__image" onerror="this.src='assets/images/placeholder.jpg'">
           <div class="special-card__text">
             <p class="special-card__date">${formatDate(specialNews.date)}</p>
             <p class="special-card__publisher">${specialNews.publisher}</p>
@@ -122,7 +122,7 @@ loadMoreBtn.addEventListener('click', (e) => {
 
         loadedNewsHTML += `
           <a href="news.html" class="special__card" onclick="localStorage.setItem('slug', '${loadedNewsContent.slug}')">
-            <img src="${loadedNewsContent.image_url}" alt="image" class="special-card__image">
+            <img src="${loadedNewsContent.image_url}" alt="image" class="special-card__image" onerror="this.src='assets/images/placeholder.jpg'">
             <div class="special-card__text">
               <p class="special-card__date">${formatDate(loadedNewsContent.date)}</p>
               <p class="special-card__publisher">${loadedNewsContent.publisher}</p>
