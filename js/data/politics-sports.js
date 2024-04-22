@@ -68,6 +68,17 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // End Featured
     // ##############
 
+    // #############
+    // Start Sidebar
+    // #############
+
+    
+
+
+    // #############
+    // End Sidebar
+    // #############
+    
 
     // #########
     // Start content Cards

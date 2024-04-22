@@ -12,7 +12,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}?pageSize=2`, requestOptions)
+fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOptions)
   .then(response => response.json())
   .then(result => {
     console.log(result)

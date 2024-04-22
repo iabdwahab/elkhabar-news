@@ -207,6 +207,16 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   height: 300px;
   padding: 20px;
 }
+.special__card::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #00000076;
+}
 .special-card__image {
   width: 100%;
   height: 100%;
@@ -235,6 +245,12 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 }
 .special-card-top .special-card__text {
   width: 80%;
+}
+.special-card__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
