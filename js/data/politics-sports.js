@@ -32,7 +32,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
       const latestNews = latestResult[i];
 
       document.querySelector(`.slideshow__news-${i}`).innerHTML = `
-        <img src="${latestNews.image_url}" alt="image" class="slideshow__image">
+        <img src="${latestNews.image_url}" alt="image" class="slideshow__image" onerror="this.src='assets/images/placeholder.jpg'">
         <div class="slideshow__text">
           <p class="slideshow__date">${formatDate(latestNews.date)}</p>
           <p class="slideshow__publisher">${latestNews.publisher}</p>
