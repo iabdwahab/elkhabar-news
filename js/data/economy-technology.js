@@ -95,7 +95,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     let specialNewsHTML = '';
 
     let specialCounter = 0;
-    for (let i = 3; i < 6; i++) {
+    for (let i = 3; i < specialResut.length; i++) {
       const specialNews = specialResut[i];
       specialCounter++;
       

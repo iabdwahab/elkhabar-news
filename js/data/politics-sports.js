@@ -28,9 +28,9 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // ############
     const latestResult = result.data.latest;
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < latestResult.length; i++) {
       const latestNews = latestResult[i];
-
+      console.log(latestNews)
       document.querySelector(`.slideshow__news-${i}`).innerHTML = `
         <img src="${latestNews.image_url}" alt="image" class="slideshow__image" onerror="this.src='assets/images/placeholder.jpg'">
         <div class="slideshow__text">
@@ -168,7 +168,6 @@ loadMoreBtn.addEventListener('click', (e) => {
           <p class="card__description">${loadedNewsContent.content[websiteLang]}</p>
         </div>
         `
-        
       });
 
       normalNewsContainer.innerHTML += newsHTML;
