@@ -720,6 +720,10 @@ html[dir="rtl"] .sub-header__link--active::after {
   gap: 10px;
   padding-left: 30px;
 }
+html[dir="rtl"] .footer__logo {
+  padding-left: 0px;
+  padding-right: 30px;
+}
 .footer-social__heading {
   text-align: center;
   margin-bottom: 10px;
@@ -759,7 +763,8 @@ html[dir="rtl"] .sub-header__link--active::after {
     text-align: center;
   }
   .footer__logo {
-    padding-left: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 /* End Footer */
