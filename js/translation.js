@@ -59,7 +59,9 @@ const translations = {
     economy_hero_description: "هو نظام من أنشطة الإنتاج والاستهلاك المترابطة التي تحدد في نهاية المطاف تخصيص الموارد داخل المجموعة.",
     technology_hero_title: "الاصطناعي <br> الذكاء",
     technology_hero_description: "تغطية إخبارية حول الذكاء الاصطناعي وتكنولوجيا التعلم الآلي، والشركات التي تبنيها، والقضايا الأخلاقية التي يثيرها الذكاء الاصطناعي اليوم. ويشمل ذلك الذكاء الاصطناعي التوليدي، بما في ذلك نماذج اللغات الكبيرة، ونماذج تحويل النص إلى صورة، ونماذج تحويل النص إلى فيديو؛ التعرف على الكلام وتوليده؛ والتحليلات التنبؤية.",
-  },
+    success_contact: "تم الإرسال بنجاح."
+  }
+  ,
   en: {
     contact: "Contact",
     contact_us: "Contact Us",
@@ -120,7 +122,7 @@ const translations = {
     economy_hero_description: "is a system of inter-related production and consumption activities that ultimately determine the allocation of resources within a group.",
     technology_hero_title: "Artificial <br> intelligence",
     technology_hero_description: "News coverage on artificial intelligence and machine learning tech, the companies building them, and the ethical issues AI raises today. This encompasses generative AI, including large language models, text-to-image and text-to-video models; speech recognition and generation; and predictive analytics.",
-
+    success_contact: "Succeed."
   }
 }
 

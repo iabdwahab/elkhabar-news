@@ -28,7 +28,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // ############
     const latestResult = result.data.latest;
 
-    for (let i = 0; i < latestResult.length; i++) {
+    for (let i = 0; i < 3; i++) {
       const latestNews = latestResult[i];
       console.log(latestNews)
       document.querySelector(`.slideshow__news-${i}`).innerHTML = `

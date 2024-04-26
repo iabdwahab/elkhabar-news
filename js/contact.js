@@ -106,5 +106,19 @@ sendBtn.addEventListener('click', (e) => {
       })
       .catch(error => console.log('error', error));
 
+      // Reset Values to Empty
+      inputFields.forEach(field => {
+        field.value = '';
+      });
+      userMessage.value = '';
+
+      // Show Success Message
+      const successMsgEl =  document.querySelector('.success-message');
+      successMsgEl.classList.add('success-message--active');
+      
+      // Remove Success Message after Time
+      setTimeout(() => {
+        successMsgEl.classList.remove('success-message--active');
+      }, 2000);
   }
 });

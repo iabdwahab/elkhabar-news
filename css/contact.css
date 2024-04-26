@@ -1,5 +1,6 @@
 @import url('global.css');
 
+
 .main-section {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -70,6 +71,16 @@ html[dir="rtl"] #phone-el {
 }
 .form__submit:active {
   opacity: 0.8;
+}
+
+.success-message {
+  color: var(--main-color);
+  margin-top: -14px;
+  text-align: center;
+  display: none;
+}
+.success-message--active {
+  display: block;
 }
 
 @media (max-width: 768px) {
