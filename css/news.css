@@ -26,9 +26,20 @@
   color: var(--third-color);
 }
 
+.news__img-body-container {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 20px;
+}
+
 .news__image {
   margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  position: sticky;
+  top: 20px;
   width: 100%;
   max-height: 250px;
+}
+.news__body {
+  margin-top: 20px;
 }
