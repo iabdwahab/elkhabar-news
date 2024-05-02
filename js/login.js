@@ -99,12 +99,12 @@ loginBtn.addEventListener('click', (e) => {
           const userFirstName = result.data.first_name;
           const userLastName = result.data.last_name;
 
-          document.querySelector('.sub-header__username').innerHTML = `${userFirstName} ${userLastName}`;
+          document.querySelector('.sub-header__username').innerHTML = `${userFirstName || 'user'} ${userLastName || 'user'}`;
 
           document.querySelector('.sub-header__user-elements').classList.add('logged-in');
 
           // When signin success; browser will be in index.html
-          window.location.href = ('./index.html');
+          window.location.href = ('https://blog.ammarelgendy.online/admin/dashboard');
 
         } else {
 
