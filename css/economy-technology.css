@@ -226,6 +226,12 @@ html[dir="rtl"] .features__feature:not(:last-child) {
   top: 0;
   left: 0;
 }
+.special-card__headline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 .special-card__date {
   color: var(--main-color);
