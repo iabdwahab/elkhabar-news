@@ -225,6 +225,7 @@ ul {
 }
 .lightbox__video {
   width: 100%;
+  height: 50vh;
 }
 .lightbox__title {
   color: black;

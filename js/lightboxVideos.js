@@ -2,15 +2,16 @@ const lightboxEl = document.querySelector('.lightbox')
 const lightboxVideoEl = document.querySelector('.lightbox__video');
 const lightboxTitleEl = document.querySelector('.lightbox__title');
 
-document.querySelectorAll('.video-thumbnail').forEach((thumbnail) => {
-  thumbnail.addEventListener('click', () => {
-    showVideo('assets/videos/video-1.webm', 'Video');
+document.querySelectorAll('.video-thumbnail').forEach((thumbnail, index) => {
+  thumbnail.addEventListener('click', (e) => {
+    showVideo(document.querySelectorAll('.video-thumbnail')[index].dataset.videoUrl, 'Video');
   });
 });
 
 document.querySelectorAll('.sidebar-card__title').forEach((thumbnail) => {
   thumbnail.addEventListener('click', () => {
-    showVideo('assets/videos/video-1.webm', 'Video');
+    console.log(e.target.dataset);
+    showVideo(document.querySelectorAll('.video-thumbnail')[index].dataset.videoUrl, 'Video');
   });
 });
 
