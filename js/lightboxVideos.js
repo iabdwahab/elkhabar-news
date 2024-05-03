@@ -28,5 +28,6 @@ document.querySelector('.lightbox__overlay').addEventListener('click', () => {
 
 
 function hideLightbox() {
+  lightboxVideoEl.pause()
   lightboxEl.classList.remove('lightbox--active');
 }
