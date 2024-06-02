@@ -1,3 +1,5 @@
+import { sidebarVideosHTML } from "./utils/appendingHTML.js";
+
 const pageCategory = document.querySelector('html').dataset.pageCategory;
 const websiteLang = localStorage.getItem('lang') || 'en';
 
@@ -119,6 +121,13 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // ##################
     // End Special News
     // ##################
+
+
+    // ##################
+    // Start Sidebar Videos
+    // ##################
+    sidebarVideosHTML(result);
+
 
     // Hide Loader from Page
     document.querySelector('.loader-container').style.display = 'none';

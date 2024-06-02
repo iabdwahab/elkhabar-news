@@ -1,3 +1,5 @@
+import { sidebarVideosHTML } from "./utils/appendingHTML.js";
+
 const websiteLang = localStorage.getItem('lang') || 'en';
 
 var myHeaders = new Headers();
@@ -68,6 +70,9 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
     }
     // End Sections
 
+    // Sidebar Videos
+    sidebarVideosHTML(result);
+    
     // Hide Loader from Page when completing loading
     document.querySelector('.loader-container').style.display = 'none';
   })
