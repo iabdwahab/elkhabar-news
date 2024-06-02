@@ -600,6 +600,7 @@ html[dir="rtl"] .sub-header__link--active::after {
 .announcement__image {
   width: 100%;
   object-fit: cover;
+  max-height: 1000px;
 }
 .hero-announcement__image {
   max-height: 300px;
