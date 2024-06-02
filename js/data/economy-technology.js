@@ -54,7 +54,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
 
 
     // Start Ads
-    adsHTML(result);
+    adsHTML(result, websiteLang);
 
     
     // #################
@@ -128,7 +128,7 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // ##################
     // Start Sidebar Videos
     // ##################
-    sidebarVideosHTML(result);
+    sidebarVideosHTML(result, websiteLang);
 
 
     // Hide Loader from Page

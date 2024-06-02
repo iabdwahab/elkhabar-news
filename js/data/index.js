@@ -40,7 +40,7 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
 
 
     // Start Ads
-    adsHTML(result);
+    adsHTML(result, websiteLang);
 
     
     // Start Sections
@@ -76,7 +76,7 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
     // End Sections
 
     // Sidebar Videos
-    sidebarVideosHTML(result);
+    sidebarVideosHTML(result, websiteLang);
     
     // Hide Loader from Page when completing loading
     document.querySelector('.loader-container').style.display = 'none';

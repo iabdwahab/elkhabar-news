@@ -71,12 +71,12 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
 
 
     // Start Ads 
-    adsHTML(result);
+    adsHTML(result, websiteLang);
 
     // #############
     // Start Sidebar
     // #############
-    sidebarVideosHTML(result);
+    sidebarVideosHTML(result, websiteLang);
 
 
     // #########
