@@ -30,7 +30,7 @@ export function sidebarVideosHTML(result, websiteLang) {
 export function adsHTML(result, websiteLang) {
   // Start Ads
   // Hero Ad
-  const heroAd = result.data.ads[0];
+  const heroAd = result.data.ads[0].cat === 'google' ? result.data.ads[0] : result.data.ads[1];
 
   document.querySelector('.hero-ad-contaienr').innerHTML = `
     <h4 class="announcement__title" data-translate-name="google_announcement">${heroAd.title[websiteLang] || heroAd.title.en}</h4>
@@ -41,7 +41,7 @@ export function adsHTML(result, websiteLang) {
 
 
   // Sidebar Ad
-  const sidebarAd = result.data.ads[1]
+  const sidebarAd = result.data.ads[0].cat === 'main' ? result.data.ads[0] : result.data.ads[1];
   document.querySelector('.sidebar-announcement').innerHTML = `
     <h4 class="announcement__title" data-translate-name="google_announcement">${sidebarAd.title[websiteLang] || sidebarAd.title.en}</h4>
     <a href="${sidebarAd.link || '#'}">
