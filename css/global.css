@@ -592,18 +592,18 @@ html[dir="rtl"] .sub-header__link--active::after {
 /* End top-news */
 
 /* Start Ads */
-.ads__title {
+.announcement__title {
   color: var(--fourth-color);
   text-align: center;
   margin-bottom: 10px;
 }
-.ads__image {
+.announcement__image {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
 }
-.sidebar-ads__image {
-  height: 150px;
+.sidebar-announcement__image {
+  height: 120px;
 }
 /* End Google Ads */
 

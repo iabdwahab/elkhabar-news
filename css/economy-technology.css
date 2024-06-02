@@ -175,7 +175,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 .sidebar-card__title {
   font-size: 19px;
 }
-.sidebar-ads {
+.sidebar-announcement {
   margin-bottom: 20px;
 }
 @media (max-width: 768px) {
