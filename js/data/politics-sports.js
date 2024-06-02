@@ -1,4 +1,4 @@
-import { sidebarVideosHTML } from "./utils/appendingHTML.js";
+import { sidebarVideosHTML, adsHTML } from "./utils/appendingHTML.js";
 
 const pageCategory = document.querySelector('html').dataset.pageCategory;
 const websiteLang = localStorage.getItem('lang') || 'en';
@@ -68,6 +68,10 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     // ##############
     // End Featured
     // ##############
+
+
+    // Start Ads 
+    adsHTML(result);
 
     // #############
     // Start Sidebar

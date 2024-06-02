@@ -1,4 +1,4 @@
-import { sidebarVideosHTML } from "./utils/appendingHTML.js";
+import { sidebarVideosHTML, adsHTML } from "./utils/appendingHTML.js";
 
 const websiteLang = localStorage.getItem('lang') || 'en';
 
@@ -38,6 +38,11 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
     });
     // End Main News [First 4 news on the top of the page]
 
+
+    // Start Ads
+    adsHTML(result);
+
+    
     // Start Sections
     const resultContent = result.data.content; // Type: Object;
 

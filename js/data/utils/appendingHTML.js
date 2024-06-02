@@ -25,3 +25,28 @@ export function sidebarVideosHTML(result) {
   // Implement lightbox Functionality after appending element in HTML
   lightboxVideos();
 }
+
+
+export function adsHTML(result) {
+  // Start Ads
+  // Hero Ad
+  const heroAd = result.data.ads[0];
+
+  document.querySelector('.hero-ad-contaienr').innerHTML = `
+    <h4 class="ads__title" data-translate-name="google_ads">${heroAd.title.en}</h4>
+    <a href="${heroAd.link || '#'}">
+      <img src="${heroAd.image_url}" alt="img" class="ads__image hero-ads__image">
+    </a>
+  `;
+
+
+  // Sidebar Ad
+  const sidebarAd = result.data.ads[1]
+  document.querySelector('.sidebar-ad').innerHTML = `
+    <h4 class="ads__title" data-translate-name="google_ads">${sidebarAd.title.en}</h4>
+    <a href="${sidebarAd.link || '#'}">
+      <img src="${sidebarAd.image_url}" alt="img" class="ads__image sidebar-ads__image">
+    </a>
+  `;
+
+}

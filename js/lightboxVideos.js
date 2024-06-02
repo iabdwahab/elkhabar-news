@@ -4,10 +4,8 @@ export function lightboxVideos() {
   const lightboxTitleEl = document.querySelector('.lightbox__title');
   
   document.querySelectorAll('.video-thumbnail').forEach((thumbnail, index) => {
-    console.log(thumbnail)
     thumbnail.addEventListener('click', (e) => {
       const videoDataset = document.querySelectorAll('.video-thumbnail')[index].dataset;
-
       showVideo(videoDataset.videoUrl, videoDataset.videoTitle);
     });
   });
@@ -15,8 +13,6 @@ export function lightboxVideos() {
   document.querySelectorAll('.sidebar-card__title').forEach((thumbnail) => {
     thumbnail.addEventListener('click', () => {
       const videoDataset = document.querySelectorAll('.video-thumbnail')[index].dataset;
-
-      console.log(videoDataset)
       showVideo(videoDataset.videoUrl, videoDataset.videoTitle);
     });
   });
