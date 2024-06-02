@@ -602,9 +602,6 @@ html[dir="rtl"] .sub-header__link--active::after {
   max-height: 300px;
   object-fit: cover;
 }
-.sidebar-announcement__image {
-  height: 120px;
-}
 /* End Google Ads */
 
 /* Start Featured Video */
