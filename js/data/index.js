@@ -1,4 +1,5 @@
 import { sidebarVideosHTML, adsHTML } from "./utils/appendingHTML.js";
+import { translations } from "../translation.js";
 
 const websiteLang = localStorage.getItem('lang') || 'en';
 
@@ -24,7 +25,7 @@ fetch("https://blog.ammarelgendy.online/api/home", requestOptions)
       mainNewsHTML += `
         <a aria-label="label" href="news.html" class="hero-news hero-news-${index}" onclick="localStorage.setItem('slug', '${mainNews.slug}')">
           <img src="${mainNews.image_url}" alt="image" class="hero-news__image" onerror="this.src='assets/images/placeholder.jpg'">          
-          <p class="hero-news__type">${mainNews.category.name}</p>
+          <p class="hero-news__type">${translations[websiteLang][mainNews.category.name]}</p>
           <p class="hero-news__date">${formatDate(mainNews.date)}</p>
           <p class="hero-news__publisher">${mainNews.publisher}</p>
           <h3 class="hero-news__title">${mainNews.title[websiteLang]}</h3>

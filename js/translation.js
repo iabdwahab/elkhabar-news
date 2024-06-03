@@ -1,4 +1,4 @@
-const translations = {
+export const translations = {
   ar: {
     contact: "تواصل معنا",
     contact_us: "تواصل معنا",
