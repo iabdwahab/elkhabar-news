@@ -135,7 +135,7 @@ html[dir="rtl"] .features__feature:not(:last-child) {
 }
 .content__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 400px;
   gap: 80px;
   margin-bottom: 30px;
 }
