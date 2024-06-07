@@ -8,7 +8,7 @@ export function sidebarVideosHTML(result, websiteLang) {
     videosHTML += `
       <div class="sidebar__card">
         <div class="video-thumbnail" data-video-url="${video.video_url}" data-video-title="${video.title[websiteLang] || video.title.en}">
-          <img src="${video.thumbnail || `assets/images/placeholder.jpg`}" alt="image" class="video-thumbnail__image">
+          <img src="${video.thumbnail || `/assets/images/placeholder.jpg` || `elkhabar-news/assets/images/placeholder.jpg`}" alt="image" class="video-thumbnail__image">
           <i class="fa-regular fa-circle-play video-thumbnail__play-icon"></i>
         </div>
 
