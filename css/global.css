@@ -728,11 +728,11 @@ html[dir="rtl"] .footer__container {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  order: 1;
   /* padding-left: 30px; */
 }
 html[dir="rtl"] .footer__logo {
   padding-left: 0px;
+  order: 1;
 }
 .footer-social__heading {
   text-align: center;
