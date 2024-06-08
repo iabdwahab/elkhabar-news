@@ -32,6 +32,9 @@ fetch(`https://blog.ammarelgendy.online/api/category/${pageCategory}`, requestOp
     for (let i = 0; i < 3; i++) {
       const latestNews = latestResult[i];
       console.log(latestNews)
+      document.querySelector(`.slideshow__news-${i}`).addEventListener('click', () => {
+        localStorage.setItem('slug', `${latestNews.slug}`);
+      })
       document.querySelector(`.slideshow__news-${i}`).innerHTML = `
         <img src="${latestNews.image_url}" alt="image" class="slideshow__image" onerror="this.src='assets/images/placeholder.jpg'">
         <div class="slideshow__text">
